@@ -7,4 +7,6 @@ It includes exercises covering basic syntax, control flow, functions, and data s
 This repository represents my learning journey in Python. More advanced and project-based Python work can be found in my other repositories 🚀.
 
 👩‍💻 Author: Tanvi Jivatode
+
 🔗 GitHub: https://github.com/tanvi2711
+
