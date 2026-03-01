@@ -2,9 +2,10 @@
 
 
 num=int(input("Enter any no: "))
-i=0
-j=0
+rev=0
+while(num>0):
+    rev=(rev*10)+num%10	
+    num=num//10
 
-while():
-    i=num//10
-    j=num%100
+if rev==num:
+    print("It is pallindrom number")
