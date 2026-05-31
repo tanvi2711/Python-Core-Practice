@@ -1,0 +1,17 @@
+Real time loop use 
+
+we can consider an ecommers platform
+ex flipcart
+if we searchg for any device ex samsung mobiles it shows n no of products
+
+which display in same manner
+
+photo |  information | price 
+photo |  information | price 
+.
+.
+.
+photo |  information | price 
+  
+
+this structure is created using loops in program of backend
