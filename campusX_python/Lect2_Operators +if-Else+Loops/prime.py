@@ -6,10 +6,11 @@ for i in range(lower_range,higher_range+1):
         if i%j==0:
             break
     else:
-        print(i)
+        print("prime : ",i)
 
 
-if i  in range(1,10):
+print("-----------continue-----------------")
+for i  in range(1,10):
     if i==5:
         continue 
     print(i)
