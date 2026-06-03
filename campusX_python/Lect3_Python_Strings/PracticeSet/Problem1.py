@@ -7,6 +7,11 @@
 # 2 1 
 # 1
 
-num=int(input("Enter no of rows": ))
+num=int(input("Enter no of rows: " ))
 
+for i in range(num+1,1,-1):
+    print("i",i)
+    for j in range(i-1,0,-1):
+        print(j,end=' ' )
+    print()
 
