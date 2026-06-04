@@ -10,16 +10,14 @@
 str1=input("Enter any string: ")
 str2=input("Enter any string: ")
 
-length=len(str1)
 
-
-s=str1[0:length//2]
+s=str1[0:len(str1)//2]
 
 
 s=s+str2
 
 
-finalstr=s+str1[length//2-1:length]
+finalstr=s+str1[len(str1)//2-1:len(str1)]
 
 
 print(finalstr)
