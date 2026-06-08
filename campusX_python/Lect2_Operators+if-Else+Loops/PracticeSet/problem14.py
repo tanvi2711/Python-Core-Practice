@@ -5,15 +5,14 @@
 
 num=int(input("Enter any no: "))
 
-sum=0
-arm=num
+for i in range (0,num+1):
+    sum=0
+    arm=i
 
-while(num!=0):
-    digit=num%10
-    sum=sum+(digit**3)
-    num=num//10
+    while(arm!=0):
+        digit=arm%10
+        sum=sum+(digit**3)
+        arm=arm//10
 
-if sum==arm:
-    print(arm,"is Armstrong number ")
-else:
-    print(arm,"is not Armstrong number ")
+    if sum==i:
+        print(i,end=" ")
