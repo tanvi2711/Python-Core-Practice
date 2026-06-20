@@ -12,15 +12,15 @@
 # [2,4,6,10,1]-->[22,20,16,10,23]
 
 l=[2,4,6,10,1]
-l2=[]
 
-for i in range(len(l)):
-    for j in range(1,len(l)):
-        # print(f"j{i}:",l[j])
-        if l[i]<=l[j]:
-            print("1con",l[i],l[j])
-            l[i]+=l[j]
-            l2.append(l[i])
-    print("con",l[i],l[j])
-print(l2)
-print(l)
+
+l1=[]
+
+for i in l:
+    sum=0
+    for j in l:
+        if i<=j:
+            sum+=j
+    l1.append(sum)
+
+print(l1)
