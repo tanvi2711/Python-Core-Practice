@@ -1,0 +1,41 @@
+# Sets
+
+A set is an unordered collection of items. Every set element is unique (no duplicates) and must be immutable (cannot be changed).
+
+However, a set itself is mutable. We can add or remove items from it.
+
+Sets can also be used to perform mathematical set operations like union, intersection, symmetric difference, etc.
+
+Characterstics:
+- Unordered
+- Mutable
+- No Duplicates
+- Can't contain mutable data types 
+    => set inside set is not possible
+    
+
+# FROZENSET
+
+# A frozenset is an immutable set.
+
+# Features:
+# ✔ Unordered
+# ✔ No Duplicates
+# ✔ Immutable
+# ✔ Supports Set Operations
+
+# Works:
+# len(), min(), max(), sum()
+# union(), intersection()
+# difference(), symmetric_difference()
+# membership testing
+
+# Doesn't Work:
+# add(), remove(), discard()
+# update(), pop(), clear()
+
+# Use Cases:
+# 1. Read-only sets
+# 2. Fixed data collections
+# 3. Creating sets of sets (2D sets)
+

@@ -1,0 +1,59 @@
+Tuples
+
+A tuple in Python is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas we can change the elements of a list.
+
+In short, a tuple is an immutable list. A tuple can not be changed in any way once it is created.
+
+Characterstics
+
+- Ordered
+- Unchangeble
+- Allows duplicate
+
+
+
+Plan of attack
+- Creating a Tuple
+- Accessing items 
+- Editing items
+- Adding items
+- Deleting items
+- Operations on Tuples
+- Tuple Functions
+
+
+
+* Difference between Lists and Tuples
+Syntax
+Mutability
+Speed => tuple fast 
+Memory =>tuple use less memory
+Built in functionality =>list provide more 
+Error prone
+Usability
+
+# Why Use List?
+# A list is used when data needs to be changed.
+# We can add, remove, or update items.
+
+fruits = ["apple", "banana", "mango"]
+
+# Example:
+fruits.append("orange")  # Add item
+fruits[0] = "grapes"     # Update item
+
+
+# Why Use Tuple?
+# A tuple is used when data should not be changed.
+# Tuples are immutable (cannot be modified).
+# They are faster and use less memory than lists.
+
+days = ("Monday", "Tuesday", "Wednesday")
+
+# Example:
+# days[0] = "Sunday"  # Error! Tuple items cannot be changed
+
+
+# Simple Rule:
+# List  -> Data can change
+# Tuple -> Data should remain fixed
