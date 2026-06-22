@@ -1,0 +1,150 @@
+Python Functions – Notes
+What is a Function?
+
+A function is a reusable block of code that performs a specific task. Instead of writing the same code again and again, we can put it inside a function and call it whenever needed.
+
+Advantages of Functions
+Code Reusability
+Reduces Repetition
+Makes Code Organized
+Easier Debugging
+Improves Readability
+Syntax of a Function
+def function_name():
+    # function body
+    statement
+
+* Example:
+
+def greet():
+    print("Hello")
+
+Here:
+
+def → keyword used to define a function
+greet → function name
+() → parentheses
+: → starts function body
+Indented code → function body
+
+
+*Calling a Function
+
+A function runs only when it is called.
+
+def greet():
+    print("Hello")
+
+greet()
+
+Output:
+
+Hello
+
+
+
+*Function with Parameters
+
+Parameters are values received by a function.
+
+def greet(name):
+    print("Hello", name)
+
+greet("Tanvi")
+
+Output:
+
+Hello Tanvi
+
+
+
+
+*Function with Multiple Parameters
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+
+Output:
+
+30
+
+
+*Return Statement
+
+return sends a value back from the function.
+
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+print(result)
+
+Output:
+
+30
+
+*Types of Functions
+1. Built-in Functions
+
+Functions already provided by Python.
+
+Examples:
+
+print()
+len()
+type()
+sum()
+max()
+
+
+
+2. User-defined Functions
+
+Functions created by the programmer.
+
+def greet():
+    print("Hello")
+
+**Function Categories
+
+
+1. No Arguments, No Return
+def show():
+    print("Python")
+
+show()
+
+
+2. Arguments, No Return
+def show(name):
+    print(name)
+
+show("Tanvi")
+
+
+3. No Arguments, Return
+def get_num():
+    return 10
+
+print(get_num())
+
+
+4. Arguments and Return
+def square(n):
+    return n*n
+
+print(square(5))
+
+
+Example Program
+def calculate_area(length, width):
+    area = length * width
+    return area
+
+result = calculate_area(5, 4)
+print("Area =", result)
+
+Output:
+
+Area = 20
