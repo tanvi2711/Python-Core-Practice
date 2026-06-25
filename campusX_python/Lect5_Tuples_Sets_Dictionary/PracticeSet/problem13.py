@@ -15,13 +15,9 @@ d=[]
 
 k={}
 
-for i in key_list:
-    for j in test_list:
-        print(i)
-        
-        if i not in k:
-            k[i]=j
-            print(k[i],k)
-    d.append(k)
 
+for i,j in zip(key_list,test_list):
+    if j not in k:
+        k[i]=j
+    d.append(k)
 print(d)
