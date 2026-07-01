@@ -5,15 +5,25 @@
 # Query Point
 # (0,0)
 
-asn
 # Output
 # Nearest to (0,0) is (1,1)
 
-def distance(l):
-    for i in l:
-        x=
-        x0=
-        y=
-        y0=
+import math
 
-distance([(1,1),(2,2),(3,3),(4,4)])
+def distance(l,q):
+    dis=0
+    for i in l:
+        x=i[0]
+        x0=0
+        y=i[0]
+        y0=0
+        dis=((x-x0)**2+(y-y0)**2)**0.5
+        print(dis)
+
+
+distance([(1,1),(2,2),(3,3),(4,4)],(0,0))
+
+
+
+
+
