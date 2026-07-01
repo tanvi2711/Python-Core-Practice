@@ -64,3 +64,45 @@ obj = ClassName()
 
 # **Q. When is `__init__()` called?**
 # **Answer:** It is called automatically whenever an object of the class is created.
+
+
+
+
+# ========================= CONSTRUCTOR (__init__) =========================
+
+# What is a Constructor?
+# - A constructor is a special (magic/dunder) method named __init__().
+# - It is automatically called whenever an object is created.
+
+# Why is it used?
+# - To initialize (assign) the initial values of object attributes.
+# - Saves time by avoiding manual initialization.
+# - Makes code clean, readable, and less error-prone.
+# - Ensures every object starts with default or required values.
+
+# Syntax:
+# class ClassName:
+#     def __init__(self):
+#         # initialization code
+
+# Example:
+class Atm:
+
+    # Constructor
+    def __init__(self):
+        self.pin = ""      # Default PIN
+        self.balance = 0   # Default balance
+
+# Object creation
+obj = Atm()    # __init__() is called automatically
+
+print(obj.pin)      # Output:
+print(obj.balance)  # Output: 0
+
+
+# Constructor (__init__) is a special method that is automatically called
+# when an object is created. It is used to initialize object attributes.
+
+
+# for ex any application we have diff functionality if it has constructor it will consisits configuration of that application a work which is not dependent on customer its a host job is written in that constructor
+#    ex god is programmer class is  earth  objects are humans then constructor is death n birth which is not in hands of human 
