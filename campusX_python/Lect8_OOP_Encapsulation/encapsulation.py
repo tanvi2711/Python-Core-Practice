@@ -1,15 +1,12 @@
 class atm():
     
-
-
-    # constructor  (special function) superpower--> we dont have to call this function to exectute it will exectue by defalut after creating an object
     def __init__(self):
         self.pin=''
-        self.balance=0
-        self.menu()
+        self.__balance=0    # it become private variable
+        # self.menu()
 
 
-    def menu(self):
+    def __menu(self):
         user_input = input('''
 Hi how can I help you?
 1. Press 1 to create pin
@@ -37,23 +34,19 @@ Hi how can I help you?
         self.pin=user_pin
 
         user_balance=int(input('Enter your balance: '))
-        self.balance=user_balance
+        self.__balancebalance=user_balance
 
         print("Pin created successfully!!!!!!!")
-        self.menu()
 
     def change_pin(self):
         old_pin=input('Enter your old pin: ')
 
         if old_pin==self.pin:
-            # let them change pin
-
             new_pin=input('Enter your pin: ')
             self.pin=new_pin
             print("Pin changed successfully!!!!!!!")
         else:
             print("Entered pin is incorrect")
-        self.menu()
 
     def check_balance(self):
         user_pin=input('Enter your pin: ')
@@ -63,7 +56,6 @@ Hi how can I help you?
             print(f'Total balance : {self.balance}')
         else:
             print("Entered pin is incorrect")
-        self.menu()
 
     def withdraw(self):
         user_pin=input('Enter your pin: ')
@@ -71,13 +63,46 @@ Hi how can I help you?
         if user_pin==self.pin:
             withdraw_amt=int(input("Enter Amount : "))
 
-            if withdraw_amt <= self.balance:
-                self.balance-=withdraw_amt
-                print(f'Withdrawal successful Total balance : {self.balance}')
+            if withdraw_amt <= self.__balance:
+                self.__balance-=withdraw_amt
+                print(f'Withdrawal successful Total balance : {self.__balance}')
             else:
                 print("Ur account does not have enough amount to withdraw")
         else:
             print("Entered pin is incorrect")
-        self.menu()
+
 
 myAtm=atm()
+
+
+myAtm.create_pin()
+myAtm.__balance='heehhe' 
+# myAtm._atm__balance='heehhe'    # user can change value like this from outside of class 
+
+myAtm._atm__balance=10999    
+
+myAtm.withdraw()
+
+print(myAtm._atm__balance)
+print(myAtm.__balance)
+
+# output:-
+# 0
+# heehhe
+
+
+# here while withdraw function exection error raise but in this code anyone can change the data of variables from outside 
+# so here we can change our atributes to private which will prevent accessing data from outside of code
+
+
+# private variable = __   
+
+
+# in java private means it become private we cant access it outside of code
+# but in python nothing is truely private programmer can change it by using '_atm__balance ' format 
+
+# becoz python is made for adults  
+
+
+
+# after we made a private variable or anything it become seprate variable '_atm__balance ' in this format it no more __balance or balance 

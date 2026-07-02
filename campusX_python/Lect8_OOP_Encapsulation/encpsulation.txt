@@ -1,0 +1,63 @@
+# ==========================================================
+# ENCAPSULATION IN PYTHON
+# ==========================================================
+
+# Definition:
+# Encapsulation is the process of wrapping (binding) data
+# (variables) and methods (functions) into a single unit (class).
+# It also helps protect data from direct access.
+
+# Why use Encapsulation?
+# ✔ Data Hiding
+# ✔ Data Security
+# ✔ Controlled Access to Data
+# ✔ Improves Code Maintainability
+
+# Access Specifiers in Python
+
+# 1. Public Members
+# - Accessible from anywhere.
+# - No  underscore (_).
+
+# Example:
+# self.name
+
+# 2. Protected Members
+# - Indicated by a single underscore (_).
+# - Should be accessed only within the class and subclasses.
+# - It is a convention, not strict protection.
+
+# Example:
+# self._age
+
+# 3. Private Members
+# - Indicated by double underscore (__).
+# - Cannot be accessed directly outside the class.
+# - Python uses Name Mangling to hide them.
+
+# Example:
+# self.__salary
+
+# Getter Method
+# - Used to read/access private data.
+
+# Setter Method
+# - Used to modify/update private data.
+
+# Advantages
+# ✔ Prevents unauthorized access
+# ✔ Protects sensitive data
+# ✔ Makes code secure and organized
+# ✔ Allows controlled modification of data
+
+# Interview Points
+# ✔ Encapsulation = Data + Methods in one class.
+# ✔ Used for Data Hiding and Security.
+# ✔ Private members use (__).
+# ✔ Getter → Read data.
+# ✔ Setter → Update data.
+
+
+# Why we r using encapsulation in code?
+
+it is covered in encapsulation.py
