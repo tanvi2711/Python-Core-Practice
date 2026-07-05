@@ -1,0 +1,553 @@
+# ==========================================================
+# POLYMORPHISM IN PYTHON (Complete Interview Notes)
+# ==========================================================
+
+# ==========================================================
+# WHAT IS POLYMORPHISM?
+# ==========================================================
+
+# Poly  = Many
+# Morph = Forms
+
+# Definition:
+# Polymorphism is an OOP concept where one interface
+# (method/function/operator) behaves differently for
+# different objects.
+
+# In simple words:
+# One thing -> Multiple Forms
+
+# Example:
+# Human:
+# speak() -> English
+# speak() -> Hindi
+# speak() -> Marathi
+
+# Same method name, different behavior.
+
+# ==========================================================
+# WHY DO WE USE POLYMORPHISM?
+# ==========================================================
+
+# 1. Code Reusability
+# 2. Flexibility
+# 3. Easy Maintenance
+# 4. Loose Coupling
+# 5. Cleaner Code
+# 6. Extensibility
+
+# ==========================================================
+# TYPES OF POLYMORPHISM
+# ==========================================================
+
+# Python mainly supports:
+
+# 1. Method Overriding (Runtime Polymorphism)
+# 2. Operator Overloading
+# 3. Duck Typing
+# 4. Method Overloading (Not directly supported)
+
+# ==========================================================
+# 1. METHOD OVERRIDING (Runtime Polymorphism)
+# ==========================================================
+
+# Definition:
+# When child class provides its own implementation
+# of a method already present in the parent class.
+
+# Parent Method
+#        ↓
+# Child replaces it with its own version
+
+# Example:
+
+# Parent
+# class Animal:
+#     def sound(self):
+#         print("Animal Sound")
+
+# Child
+# class Dog(Animal):
+#     def sound(self):
+#         print("Bark")
+
+# Child method overrides Parent method.
+
+# Features:
+# ✔ Same method name
+# ✔ Same parameters
+# ✔ Parent-Child relationship required
+# ✔ Runtime decision
+
+# ==========================================================
+# METHOD OVERRIDING FLOW
+# ==========================================================
+
+# Parent Class
+#       ↓
+# Child Class
+#       ↓
+# Object Created
+#       ↓
+# Child Method Executes
+
+# If child doesn't have that method
+# then Parent's method executes.
+
+# ==========================================================
+# super() IN OVERRIDING
+# ==========================================================
+
+# super() is used to call Parent class methods.
+
+# Example:
+
+# class Parent:
+#     def display(self):
+#         print("Parent")
+
+# class Child(Parent):
+#     def display(self):
+#         super().display()
+#         print("Child")
+
+# Output:
+# Parent
+# Child
+
+# ==========================================================
+# 2. OPERATOR OVERLOADING
+# ==========================================================
+
+# Definition:
+# Giving additional meaning to existing operators.
+
+# Python operators internally call Magic Methods.
+
+# Example:
+
+# 5 + 10
+# Actually calls:
+# int.__add__()
+
+# "Hello" + "World"
+# Calls:
+# str.__add__()
+
+# ==========================================================
+# COMMON OPERATOR MAGIC METHODS
+# ==========================================================
+
+# +   -> __add__()
+
+# -   -> __sub__()
+
+# *   -> __mul__()
+
+# /   -> __truediv__()
+
+# //  -> __floordiv__()
+
+# %   -> __mod__()
+
+# **  -> __pow__()
+
+# ==  -> __eq__()
+
+# !=  -> __ne__()
+
+# <   -> __lt__()
+
+# <=  -> __le__()
+
+# >   -> __gt__()
+
+# >=  -> __ge__()
+
+# ==========================================================
+# EXAMPLE OF OPERATOR OVERLOADING
+# ==========================================================
+
+# class Point:
+#
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#
+#     def __add__(self,other):
+#         return Point(self.x+other.x,
+#                      self.y+other.y)
+
+# p1+p2 automatically calls
+
+# p1.__add__(p2)
+
+# ==========================================================
+# 3. DUCK TYPING
+# ==========================================================
+
+# Definition:
+# Python doesn't care about object type.
+# It only checks whether required method exists.
+
+# Famous Rule:
+
+# "If it walks like a duck,
+# talks like a duck,
+# then treat it as a duck."
+
+# Example:
+
+# class Dog:
+#     def speak(self):
+#         print("Bark")
+
+# class Cat:
+#     def speak(self):
+#         print("Meow")
+
+# def animal_voice(animal):
+#     animal.speak()
+
+# animal_voice(Dog())
+# animal_voice(Cat())
+
+# Same function
+# Different outputs
+
+# This is Duck Typing.
+
+# ==========================================================
+# ADVANTAGES OF DUCK TYPING
+# ==========================================================
+
+# ✔ Flexible
+# ✔ Less dependency
+# ✔ Cleaner code
+# ✔ No need of inheritance
+
+# ==========================================================
+# 4. METHOD OVERLOADING
+# ==========================================================
+
+# Definition:
+# Multiple methods having same name
+# but different parameters.
+
+# Example in Java:
+
+# add(int,int)
+# add(int,int,int)
+
+# Python DOES NOT support Method Overloading directly.
+
+# Because:
+
+# Last defined method overwrites previous methods.
+
+# Example:
+
+# def add(a,b):
+#     pass
+
+# def add(a,b,c):
+#     pass
+
+# First function disappears.
+
+# ==========================================================
+# HOW PYTHON ACHIEVES OVERLOADING?
+# ==========================================================
+
+# Python uses:
+
+# 1. Default Arguments
+
+# Example:
+# def add(a,b,c=0):
+#     return a+b+c
+
+# add(5,6)
+# add(5,6,7)
+
+# ----------------------------
+
+# 2. Variable Length Arguments
+
+# Example:
+
+# def add(*numbers):
+#     return sum(numbers)
+
+# add(2,3)
+# add(2,3,4)
+# add(2,3,4,5)
+
+# ==========================================================
+# COMPILE TIME VS RUNTIME POLYMORPHISM
+# ==========================================================
+
+# Compile Time
+# ----------------
+# Method Overloading
+
+# Decided during compilation.
+
+# Python:
+# Not Supported Directly
+
+# ----------------------------
+
+# Runtime
+# ----------------------------
+# Method Overriding
+
+# Decided while program runs.
+
+# Python:
+# Supported
+
+# ==========================================================
+# POLYMORPHISM USING FUNCTIONS
+# ==========================================================
+
+# len("Hello") = 5
+
+# len([1,2,3]) = 3
+
+# len({1,2,3}) = 3
+
+# Same function
+
+# Different objects
+
+# Different behavior
+
+# This is also Polymorphism.
+
+# ==========================================================
+# POLYMORPHISM USING ITERATION
+# ==========================================================
+
+# for i in "Python":
+#     print(i)
+
+# for i in [1,2,3]:
+#     print(i)
+
+# Same for loop
+
+# Different object types
+
+# ==========================================================
+# POLYMORPHISM USING print()
+# ==========================================================
+
+# print(10)
+
+# print("Hello")
+
+# print([1,2,3])
+
+# print(True)
+
+# Same print()
+
+# Works with different objects.
+
+# ==========================================================
+# POLYMORPHISM USING + OPERATOR
+# ==========================================================
+
+# 5+3
+# Addition
+
+# "Hi"+"Hello"
+# Concatenation
+
+# [1]+[2]
+# List Merge
+
+# Same operator
+
+# Different behavior
+
+# ==========================================================
+# POLYMORPHISM USING * OPERATOR
+# ==========================================================
+
+# 5*3
+# Multiplication
+
+# "Hi"*3
+# Repeat String
+
+# [1]*3
+# Repeat List
+
+# ==========================================================
+# REAL LIFE EXAMPLES
+# ==========================================================
+
+# Remote Button
+# TV -> Channel Change
+
+# AC -> Temperature
+
+# Fan -> Speed
+
+# Same Button
+
+# Different Action
+
+# ----------------------------
+
+# Payment
+
+# pay()
+
+# Credit Card
+
+# Debit Card
+
+# UPI
+
+# Cash
+
+# Same method
+
+# Different implementation
+
+# ----------------------------
+
+# Notification
+
+# send()
+
+# Email
+
+# SMS
+
+# WhatsApp
+
+# Push Notification
+
+# ==========================================================
+# ADVANTAGES OF POLYMORPHISM
+# ==========================================================
+
+# ✔ Code Reusability
+
+# ✔ Flexibility
+
+# ✔ Extensibility
+
+# ✔ Easy Maintenance
+
+# ✔ Dynamic Behavior
+
+# ✔ Less Code Duplication
+
+# ✔ Better Readability
+
+# ✔ Easy Testing
+
+# ==========================================================
+# DISADVANTAGES OF POLYMORPHISM
+# ==========================================================
+
+# ✖ Slightly difficult to understand
+
+# ✖ Debugging can become difficult
+
+# ✖ Runtime overhead
+
+# ✖ Wrong overriding can create bugs
+
+# ==========================================================
+# INTERVIEW QUESTIONS
+# ==========================================================
+
+# Q1. What is Polymorphism?
+
+# One interface having multiple forms.
+
+# --------------------------------------------------
+
+# Q2. What are the types of Polymorphism in Python?
+
+# • Method Overriding
+# • Operator Overloading
+# • Duck Typing
+# • Method Overloading (Indirectly)
+
+# --------------------------------------------------
+
+# Q3. Does Python support Method Overloading?
+
+# No.
+# Python achieves it using
+# default parameters and *args.
+
+# --------------------------------------------------
+
+# Q4. Does Python support Method Overriding?
+
+# Yes.
+
+# --------------------------------------------------
+
+# Q5. What is Runtime Polymorphism?
+
+# Method Overriding
+
+# --------------------------------------------------
+
+# Q6. What is Compile Time Polymorphism?
+
+# Method Overloading
+# (Not directly supported in Python)
+
+# --------------------------------------------------
+
+# Q7. What is Duck Typing?
+
+# Python checks whether an object has the
+# required method instead of checking its type.
+
+# --------------------------------------------------
+
+# Q8. What is Operator Overloading?
+
+# Giving additional meaning to an existing operator
+# using Magic Methods.
+
+# --------------------------------------------------
+
+# Q9. Which magic method is used for '+' ?
+
+# __add__()
+
+# --------------------------------------------------
+
+# Q10. What is the role of super() in Polymorphism?
+
+# It calls the Parent class method from
+# the Child class.
+
+# ==========================================================
+# SHORT INTERVIEW ANSWER (30 Seconds)
+# ==========================================================
+
+# Polymorphism is an OOP concept where the same
+# method, function, or operator performs different
+# actions depending on the object. In Python,
+# polymorphism is achieved mainly through Method
+# Overriding, Operator Overloading, Duck Typing,
+# and built-in polymorphic functions like len() and
+# print(). It improves code reusability, flexibility,
+# and maintainability.
+
+# ==========================================================
+# END OF POLYMORPHISM NOTES
+# ==========================================================

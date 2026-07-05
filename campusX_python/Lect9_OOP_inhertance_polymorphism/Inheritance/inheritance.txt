@@ -1,0 +1,199 @@
+# ==========================================
+# Inheritance in Python (IS-A Relationship)
+# ==========================================
+
+# Definition:
+# Inheritance is an OOP concept in which one class
+# acquires the properties (variables) and behaviors
+# (methods) of another class.
+#
+# It represents an IS-A relationship.
+
+# Syntax:
+# class Parent:
+#     pass
+#
+# class Child(Parent):
+#     pass
+
+# Why is it used?
+# - To reuse existing code.
+# - To reduce code duplication.
+# - To add new features in the child class.
+# - To make programs easier to maintain.
+
+# Key Points:
+# 1. Parent class is also called Base or Super class.
+# 2. Child class is also called Derived or Sub class.
+# 3. Child class can access all public members of Parent.
+# 4. Child can also have its own variables and methods.
+# 5. Supports method overriding.
+
+# ==========================================
+# Example
+# ==========================================
+
+class Animal:
+
+    def eat(self):
+        print("Animal is eating")
+
+    def sleep(self):
+        print("Animal is sleeping")
+
+
+class Dog(Animal):      # Dog inherits Animal
+
+    def bark(self):
+        print("Dog is barking")
+
+
+# Creating object
+d1 = Dog()
+
+# Parent class methods
+d1.eat()
+d1.sleep()
+
+# Child class method
+d1.bark()
+
+# Output:
+# Animal is eating
+# Animal is sleeping
+# Dog is barking
+
+
+# ==========================================
+# Memory Representation
+# ==========================================
+
+#        Animal (Parent)
+#       /      \
+#   eat()    sleep()
+#          ▲
+#          |
+#       Dog (Child)
+#        bark()
+
+# Dog can use both its own methods
+# and inherited methods from Animal.
+
+# ==========================================
+# Types of Inheritance
+# ==========================================
+
+# 1. Single Inheritance
+# Parent  →  Child
+
+# 2. Multiple Inheritance
+# Parent1 + Parent2  →  Child
+
+# 3. Multilevel Inheritance
+# GrandParent → Parent → Child
+
+# 4. Hierarchical Inheritance
+# One Parent → Multiple Children
+
+# 5. Hybrid Inheritance
+# Combination of two or more inheritance types.
+
+# ==========================================
+# Advantages
+# ==========================================
+
+# ✔ Code Reusability
+# ✔ Less Code Duplication
+# ✔ Easy Maintenance
+# ✔ Extensible Code
+# ✔ Supports Polymorphism
+
+# ==========================================
+# Interview Definition
+# ==========================================
+
+# Inheritance:
+# Inheritance is an OOP concept where one class
+# acquires the properties and methods of another
+# class. It represents an IS-A relationship and
+# promotes code reusability.
+
+
+# ==========================================
+# DRY Principle (Don't Repeat Yourself)
+# ==========================================
+
+# Definition:
+# DRY means writing common code only once
+# and reusing it wherever required.
+
+# Why use DRY?
+# ✔ Avoids code duplication.
+# ✔ Easy to maintain and update.
+# ✔ Improves code readability.
+# ✔ Saves development time.
+
+# Example:
+
+# Without DRY
+# Student
+#   login()
+#   register()
+#   enroll()
+#   review()
+
+# Instructor
+#   login()        # Duplicate
+#   register()     # Duplicate
+#   create()
+#   reply()
+
+# ------------------------------------------
+
+# With DRY (Using Inheritance)
+
+# User (Parent Class)
+#   login()
+#   register()
+
+#        ▲
+#        │
+#  --------------------
+#  │                  │
+# Student          Instructor
+# enroll()         create()
+# review()         reply()
+
+# Student and Instructor inherit
+# login() and register() from User,
+# so the common code is written only once.
+
+# Interview Definition:
+# DRY (Don't Repeat Yourself) is a software
+# design principle that avoids duplicate code
+# by writing common logic once and reusing it.
+
+
+
+What gets inherited?
+Constructor
+Non Private Attributes
+Non Private Methods
+
+
+
+
+Inheritance in summary
+A class can inherit from another class.
+
+Inheritance improves code reuse
+
+Constructor, attributes, methods get inherited to the child class
+
+The parent has no access to the child class
+
+Private properties of parent are not accessible directly in child class
+
+Child class can override the attributes or methods. This is called method overriding
+
+super() is an inbuilt function which is used to invoke the parent class methods and constructor

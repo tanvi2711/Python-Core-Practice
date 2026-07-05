@@ -1,0 +1,130 @@
+# has a relatonship
+# one class owns the other class
+
+
+# ==========================================
+# Aggregation in Python (HAS-A Relationship)
+# ==========================================
+
+# Definition:
+# Aggregation is an OOP concept where one class
+# contains (has-a) object of another class.
+#
+# The contained object can exist independently.
+# If the container object is destroyed,
+# the contained object still exists.
+
+# Syntax:
+# class A:
+#     pass
+#
+# class B:
+#     def __init__(self, obj):
+#         self.obj = obj
+
+# Why is it used?
+# - To reuse existing classes.
+# - To establish a HAS-A relationship.
+# - To reduce code duplication.
+# - To make programs modular and maintainable.
+
+# Key Points:
+# 1. Represents a HAS-A relationship.
+# 2. Objects are loosely coupled.
+# 3. Both objects have separate life cycles.
+# 4. One object simply uses another object.
+
+# ==========================================
+# Example
+# ==========================================
+
+# class Engine:
+
+#     def start(self):
+#         print("Engine Started")
+
+
+# class Car:
+
+#     def __init__(self, engine):
+#         # Aggregation
+#         # Car HAS-A Engine
+#         self.engine = engine
+
+#     def drive(self):
+#         self.engine.start()
+#         print("Car is moving")
+
+
+# # Creating Engine object
+# e1 = Engine()
+
+# # Passing Engine object to Car
+# c1 = Car(e1)
+
+# c1.drive()
+
+# Output:
+# Engine Started
+# Car is moving
+
+
+# ==========================================
+# Memory Representation
+# ==========================================
+
+# Engine Object (e1)
+#      ↑
+#      |
+# Car Object (c1)
+#
+# Car stores only the reference of Engine object.
+# Both objects exist independently.
+
+# ==========================================
+# Real-Life Examples
+# ==========================================
+
+# Student HAS-A Laptop
+# Car HAS-A Engine
+# Employee HAS-A Address
+# Department HAS-A Teacher
+# School HAS-A Student
+
+# ==========================================
+# Advantages
+# ==========================================
+
+# ✔ Code Reusability
+# ✔ Loose Coupling
+# ✔ Better Maintainability
+# ✔ Easy to Modify
+# ✔ Follows Object-Oriented Design
+
+# ==========================================
+# Aggregation vs Composition
+# ==========================================
+
+# Aggregation
+# -----------
+# Weak HAS-A relationship
+# Objects exist independently
+# Child object can exist without Parent
+
+# Composition
+# -----------
+# Strong HAS-A relationship
+# Child depends on Parent
+# If Parent is destroyed,
+# Child is also destroyed
+
+# ==========================================
+# Interview Definition
+# ==========================================
+
+# Aggregation:
+# Aggregation is a HAS-A relationship in which
+# one class contains the reference of another class's
+# object. Both objects are independent and have
+# separate life cycles.
+

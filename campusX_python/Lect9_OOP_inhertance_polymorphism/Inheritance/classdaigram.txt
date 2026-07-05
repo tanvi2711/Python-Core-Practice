@@ -1,0 +1,93 @@
+# ==========================================
+# Class Diagram (UML)
+# ==========================================
+
+# Definition:
+# A Class Diagram is a UML (Unified Modeling Language)
+# diagram that represents the structure of a class,
+# including its attributes, methods, and relationships.
+
+# ==========================================
+# Structure of a Class
+# ==========================================
+
+# -----------------------------
+# |        Class Name         |
+# -----------------------------
+# | - Attributes             |
+# | - Variables              |
+# -----------------------------
+# | + Methods()              |
+# | + Functions()            |
+# -----------------------------
+
+# Symbols:
+# +  → Public
+# -  → Private
+# #  → Protected
+
+# ==========================================
+# Relationships
+# ==========================================
+
+# 1. Inheritance (IS-A)
+# ---------------------
+# Child class inherits properties and methods
+# from the Parent class.
+
+# Example:
+#
+#          User
+#     login()
+#     register()
+#          ▲
+#          │
+#   -----------------
+#   │               │
+# Student      Instructor
+# enroll()      create()
+# review()      reply()
+#
+# Student IS-A User
+# Instructor IS-A User
+
+# ------------------------------------------
+
+# 2. Aggregation (HAS-A)
+# ----------------------
+# One class contains an object of another class.
+# Both objects exist independently.
+
+# Example:
+#
+# Customer
+# -------------------------
+# - name
+# - gender
+# - address
+#
+# + print_address()
+# + edit_profile()
+# -------------------------
+#          HAS-A
+#             │
+#             ▼
+# Address
+# -------------------------
+# - city
+# - pin
+# - state
+#
+# + get_city()
+# + edit_address()
+# -------------------------
+
+# ==========================================
+# Interview Definition
+# ==========================================
+
+# Class Diagram:
+# A UML diagram used to represent a class,
+# its attributes, methods, and relationships
+# such as Inheritance (IS-A) and
+# Aggregation (HAS-A).
