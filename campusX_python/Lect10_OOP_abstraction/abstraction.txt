@@ -1,0 +1,582 @@
+# ==========================================================
+# ABSTRACTION IN PYTHON (Complete Interview Notes)
+# ==========================================================
+
+# ==========================================================
+# WHAT IS ABSTRACTION?
+# ==========================================================
+
+# Definition:
+# Abstraction is one of the four pillars of Object-Oriented Programming (OOP).
+# It means hiding the internal implementation details and showing
+# only the essential features to the user.
+
+# In simple words:
+# Show WHAT an object does,
+# Hide HOW it does it.
+
+# Example:
+# ATM Machine
+# You only know:
+# ✔ Insert Card
+# ✔ Enter PIN
+# ✔ Withdraw Money
+# ✔ Check Balance
+#
+# You don't know:
+# ✖ How the server validates your PIN
+# ✖ How money is counted
+# ✖ How the database updates
+#
+# This is Abstraction.
+
+# ==========================================================
+# REAL-LIFE EXAMPLES OF ABSTRACTION
+# ==========================================================
+
+# 1. Car
+# User knows:
+# ✔ Start()
+# ✔ Brake()
+# ✔ Accelerate()
+#
+# User doesn't know:
+# ✖ Engine combustion
+# ✖ Fuel injection process
+# ✖ Gear mechanism
+
+# ----------------------------------------------------------
+
+# 2. Mobile Phone
+# User knows:
+# ✔ Call
+# ✔ Camera
+# ✔ Internet
+#
+# Hidden:
+# ✖ Signal processing
+# ✖ Memory allocation
+# ✖ CPU scheduling
+
+# ----------------------------------------------------------
+
+# 3. TV Remote
+# Press Power Button
+#
+# Hidden:
+# ✔ Infrared Signals
+# ✔ Circuit Communication
+# ✔ Internal Electronics
+
+# ==========================================================
+# WHY DO WE USE ABSTRACTION?
+# ==========================================================
+
+# ✔ Hide unnecessary details
+# ✔ Increase security
+# ✔ Reduce complexity
+# ✔ Improve code readability
+# ✔ Easy maintenance
+# ✔ Better scalability
+# ✔ Focus only on important functionalities
+
+# ==========================================================
+# HOW IS ABSTRACTION ACHIEVED IN PYTHON?
+# ==========================================================
+
+# Python provides abstraction using:
+
+# 1. Abstract Classes
+# 2. Abstract Methods
+# 3. ABC Module
+
+# ==========================================================
+# ABSTRACT CLASS
+# ==========================================================
+
+# Definition:
+# A class that cannot be instantiated (cannot create objects)
+# and is meant to be inherited by other classes.
+
+# Abstract classes may contain:
+#
+# ✔ Abstract Methods
+# ✔ Normal Methods
+# ✔ Constructors
+# ✔ Variables
+
+# ==========================================================
+# ABC MODULE
+# ==========================================================
+
+# ABC stands for:
+# Abstract Base Class
+
+# Python provides the abc module
+# to create abstract classes.
+
+# Import Statement:
+
+# from abc import ABC, abstractmethod
+
+# ABC
+# -> Used to create Abstract Class
+
+# abstractmethod
+# -> Used to create Abstract Method
+
+# ==========================================================
+# ABSTRACT METHOD
+# ==========================================================
+
+# Definition:
+# An abstract method is a method
+# that has only declaration,
+# but NO implementation.
+
+# Example:
+
+# from abc import ABC, abstractmethod
+#
+# class Animal(ABC):
+#
+#     @abstractmethod
+#     def sound(self):
+#         pass
+
+# Here,
+# sound() has no body.
+# Child classes must implement it.
+
+# ==========================================================
+# RULES OF ABSTRACT METHODS
+# ==========================================================
+
+# ✔ Must use @abstractmethod decorator
+#
+# ✔ Must be inside an Abstract Class
+#
+# ✔ Child class MUST override it
+#
+# ✔ Cannot create object of Abstract Class
+
+# ==========================================================
+# WHY CAN'T WE CREATE OBJECT OF ABSTRACT CLASS?
+# ==========================================================
+
+# Because the class is incomplete.
+
+# Example:
+
+# class Shape(ABC):
+#
+#     @abstractmethod
+#     def area(self):
+#         pass
+
+# Shape has no implementation of area().
+
+# Therefore,
+
+# Shape()
+
+# Gives Error.
+
+# ==========================================================
+# WHAT HAPPENS IF CHILD CLASS DOESN'T IMPLEMENT
+# ABSTRACT METHOD?
+# ==========================================================
+
+# Python throws TypeError.
+
+# Example:
+
+# class Dog(Animal):
+#     pass
+
+# Dog()
+
+# Error:
+# Can't instantiate abstract class Dog
+# with abstract method sound
+
+# ==========================================================
+# ABSTRACT CLASS CAN HAVE NORMAL METHODS
+# ==========================================================
+
+# Yes.
+
+# Example:
+
+# class Animal(ABC):
+#
+#     @abstractmethod
+#     def sound(self):
+#         pass
+#
+#     def sleep(self):
+#         print("Sleeping")
+
+# Here,
+
+# sound()
+# -> Abstract
+
+# sleep()
+# -> Normal
+
+# ==========================================================
+# ABSTRACT CLASS CAN HAVE CONSTRUCTOR
+# ==========================================================
+
+# Yes.
+
+# Example:
+
+# class Animal(ABC):
+#
+#     def __init__(self):
+#         print("Constructor")
+#
+#     @abstractmethod
+#     def sound(self):
+#         pass
+
+# Constructors are inherited by child classes.
+
+# ==========================================================
+# ABSTRACT CLASS CAN HAVE VARIABLES
+# ==========================================================
+
+# Yes.
+
+# Example:
+
+# class Animal(ABC):
+#
+#     animal_type = "Mammal"
+
+# ==========================================================
+# FLOW OF ABSTRACTION
+# ==========================================================
+
+# Abstract Class
+#        ↓
+# Abstract Method
+#        ↓
+# Child Class
+#        ↓
+# Method Implementation
+#        ↓
+# Object Creation
+#        ↓
+# Call Method
+
+# ==========================================================
+# EXAMPLE FLOW
+# ==========================================================
+
+# Vehicle (Abstract Class)
+#
+#        ↓
+#
+# start() (Abstract Method)
+#
+#        ↓
+#
+# Car
+# Bike
+# Truck
+#
+#        ↓
+#
+# Each class provides its own implementation.
+
+# ==========================================================
+# ABSTRACT CLASS VS NORMAL CLASS
+# ==========================================================
+
+# Normal Class
+
+# ✔ Object can be created
+# ✔ Methods may have implementation
+# ✔ Used directly
+
+# ----------------------------------------------------------
+
+# Abstract Class
+
+# ✖ Cannot create object
+# ✔ Used only for inheritance
+# ✔ May contain abstract methods
+# ✔ Provides common blueprint
+
+# ==========================================================
+# ABSTRACT METHOD VS NORMAL METHOD
+# ==========================================================
+
+# Abstract Method
+
+# ✔ Only declaration
+# ✔ No implementation
+# ✔ Child must override
+
+# ----------------------------------------------------------
+
+# Normal Method
+
+# ✔ Has implementation
+# ✔ Child may override
+# ✔ Optional
+
+# ==========================================================
+# ABSTRACTION VS ENCAPSULATION
+# ==========================================================
+
+# Abstraction
+
+# Hides implementation details.
+
+# Focus:
+# What object does.
+
+# Example:
+# ATM Machine
+
+# ----------------------------------------------------------
+
+# Encapsulation
+
+# Hides data.
+
+# Focus:
+# Protect object data.
+
+# Example:
+# Private Variables
+
+# ==========================================================
+# ABSTRACTION VS INHERITANCE
+# ==========================================================
+
+# Abstraction
+
+# Defines blueprint.
+
+# ----------------------------------------------------------
+
+# Inheritance
+
+# Reuses code.
+
+# ==========================================================
+# ABSTRACTION VS POLYMORPHISM
+# ==========================================================
+
+# Abstraction
+
+# Hides implementation.
+
+# ----------------------------------------------------------
+
+# Polymorphism
+
+# Same interface,
+# Different implementation.
+
+# ==========================================================
+# ADVANTAGES OF ABSTRACTION
+# ==========================================================
+
+# ✔ Hides unnecessary details
+#
+# ✔ Increases security
+#
+# ✔ Improves maintainability
+#
+# ✔ Reduces complexity
+#
+# ✔ Better code organization
+#
+# ✔ Promotes modular programming
+#
+# ✔ Makes large projects manageable
+
+# ==========================================================
+# DISADVANTAGES OF ABSTRACTION
+# ==========================================================
+
+# ✖ More classes
+#
+# ✖ Slightly complex design
+#
+# ✖ Learning curve for beginners
+#
+# ✖ Extra code for small projects
+
+# ==========================================================
+# IMPORTANT TERMS
+# ==========================================================
+
+# ABC
+# ->
+# Abstract Base Class
+
+# ----------------------------------------------------------
+
+# abstractmethod
+# ->
+# Decorator used to create
+# abstract methods.
+
+# ----------------------------------------------------------
+
+# Blueprint
+# ->
+# Design/template for child classes.
+
+# ----------------------------------------------------------
+
+# Concrete Class
+# ->
+# A child class that implements
+# all abstract methods.
+
+# ==========================================================
+# INTERVIEW QUESTIONS
+# ==========================================================
+
+# Q1. What is Abstraction?
+
+# Hiding implementation details
+# and exposing only essential features.
+
+# ----------------------------------------------------------
+
+# Q2. How is Abstraction implemented in Python?
+
+# Using:
+#
+# abc module
+# ABC
+# @abstractmethod
+
+# ----------------------------------------------------------
+
+# Q3. What is ABC?
+
+# ABC stands for
+# Abstract Base Class.
+
+# ----------------------------------------------------------
+
+# Q4. What is abstractmethod?
+
+# A decorator used to declare
+# abstract methods.
+
+# ----------------------------------------------------------
+
+# Q5. Can we create object of Abstract Class?
+
+# No.
+
+# ----------------------------------------------------------
+
+# Q6. Why can't we create object
+# of Abstract Class?
+
+# Because it contains incomplete methods.
+
+# ----------------------------------------------------------
+
+# Q7. Can Abstract Class have constructor?
+
+# Yes.
+
+# ----------------------------------------------------------
+
+# Q8. Can Abstract Class have variables?
+
+# Yes.
+
+# ----------------------------------------------------------
+
+# Q9. Can Abstract Class have normal methods?
+
+# Yes.
+
+# ----------------------------------------------------------
+
+# Q10. Can an Abstract Class have only normal methods?
+
+# Yes.
+# It is still an Abstract Class if it inherits from ABC,
+# though abstract classes are mainly used with
+# abstract methods.
+
+# ----------------------------------------------------------
+
+# Q11. What happens if child class
+# doesn't implement abstract method?
+
+# TypeError occurs.
+
+# ----------------------------------------------------------
+
+# Q12. Is Multiple Inheritance possible
+# with Abstract Classes?
+
+# Yes.
+
+# ----------------------------------------------------------
+
+# Q13. Which module provides Abstraction?
+
+# abc module
+
+# ==========================================================
+# 30-SECOND INTERVIEW ANSWER
+# ==========================================================
+
+# Abstraction is an OOP concept that hides the internal
+# implementation details and exposes only the essential
+# functionalities to the user. In Python, abstraction is
+# implemented using the abc module, Abstract Base Classes
+# (ABC), and the @abstractmethod decorator. An abstract class
+# cannot be instantiated, and its abstract methods must be
+# implemented by child classes. Abstraction helps reduce
+# complexity, improves security, and makes code easier to
+# maintain.
+
+# ==========================================================
+# QUICK REVISION
+# ==========================================================
+
+# ✔ Abstraction = Hide Implementation
+#
+# ✔ Implemented using abc module
+#
+# ✔ Uses ABC class
+#
+# ✔ Uses @abstractmethod decorator
+#
+# ✔ Cannot create object of Abstract Class
+#
+# ✔ Child class must implement abstract methods
+#
+# ✔ Abstract Class can have:
+#      • Constructor
+#      • Variables
+#      • Normal Methods
+#      • Abstract Methods
+#
+# ✔ Improves security
+#
+# ✔ Reduces complexity
+#
+# ✔ Makes code reusable and maintainable
+
+# ==========================================================
+# END OF ABSTRACTION NOTES
+# ==========================================================
