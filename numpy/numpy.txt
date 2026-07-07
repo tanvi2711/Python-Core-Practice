@@ -1,0 +1,508 @@
+#
+# ======================================
+#        NUMPY - SHORT NOTES
+# ======================================
+
+# NumPy (Numerical Python) is a Python library
+# used for fast numerical and mathematical computations.
+# It provides the ndarray (N-dimensional Array).
+
+# Why NumPy?
+# ----------
+# Python Lists are slow, use more memory,
+# and require loops for calculations.
+# NumPy makes calculations faster and easier.
+
+# Benefits
+# --------
+# ✔ High Speed
+# ✔ Less Memory
+# ✔ Vectorized Operations (No loops)
+# ✔ Easy Math & Matrix Operations
+# ✔ Handles Large Datasets
+
+# Used In
+# -------
+# • Data Science
+# • Machine Learning
+# • AI
+# • Deep Learning
+# • Data Analysis
+
+# Installation
+# ------------
+# pip install numpy
+
+# Import
+# ------
+# import numpy as np
+
+# Quick Facts
+# -----------
+# Full Form : Numerical Python
+# Data Structure : ndarray
+# Faster Than : Python Lists
+# Standard Alias : np
+
+
+ =====================================================================================================
+#                                   NUMPY - COMPLETE INTRODUCTION NOTES
+# =====================================================================================================
+#
+# What is NumPy?
+# ----------------
+# NumPy (Numerical Python) is a powerful Python library used for:
+# • Numerical Computing
+# • Mathematical Operations
+# • Scientific Computing
+# • Data Analysis
+# • Machine Learning
+# • Artificial Intelligence
+# • Deep Learning
+#
+# It provides a special data structure called ndarray (N-Dimensional Array)
+# which is much faster and more efficient than Python Lists.
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Why was NumPy Created?
+# -----------------------------------------------------------------------------------------------------
+#
+# Before NumPy:
+# - Python only had Lists.
+# - Lists are flexible but slow for numerical calculations.
+# - Mathematical operations required loops.
+# - Large datasets consumed more memory.
+# - Scientific calculations became inefficient.
+#
+# NumPy solved these problems by introducing fast arrays implemented in C.
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Problems with Python Lists
+# -----------------------------------------------------------------------------------------------------
+#
+# Example:
+#
+# list1 = [1,2,3]
+# list2 = [4,5,6]
+#
+# print(list1 + list2)
+#
+# Output:
+# [1,2,3,4,5,6]
+#
+# Instead of addition, it concatenates the lists.
+#
+#
+# If we want:
+#
+# [5,7,9]
+#
+# We must write loops manually.
+#
+#
+# Example:
+#
+# result = []
+# for i in range(len(list1)):
+#     result.append(list1[i] + list2[i])
+#
+#
+# This is:
+#
+# ❌ More code
+# ❌ Slower
+# ❌ Uses more memory
+#
+#
+# NumPy solves this in one line:
+#
+# arr1 + arr2
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# What Problems Does NumPy Solve?
+# -----------------------------------------------------------------------------------------------------
+#
+# ✔ Fast numerical calculations
+#
+# ✔ Handles millions of data efficiently
+#
+# ✔ Less memory usage
+#
+# ✔ Easy mathematical operations
+#
+# ✔ Matrix calculations
+#
+# ✔ Statistical analysis
+#
+# ✔ Linear Algebra
+#
+# ✔ Random number generation
+#
+# ✔ Data manipulation
+#
+# ✔ Foundation for AI & Machine Learning
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Why Use NumPy?
+# -----------------------------------------------------------------------------------------------------
+#
+# Instead of writing:
+#
+# for i in range(len(list)):
+#     ...
+#
+# NumPy performs operations on the complete array at once.
+#
+# This is called:
+#
+# Vectorization
+#
+# Which makes code:
+#
+# ✔ Short
+# ✔ Faster
+# ✔ Cleaner
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Real Life Example
+# -----------------------------------------------------------------------------------------------------
+#
+# Imagine you have marks of 10 lakh students.
+#
+# Using Python List:
+#
+# - Slow calculations
+# - High memory usage
+# - Multiple loops required
+#
+#
+# Using NumPy:
+#
+# - Fast calculations
+# - Less memory
+# - Single line operations
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Features of NumPy
+# -----------------------------------------------------------------------------------------------------
+#
+# ✔ High Performance
+#
+# ✔ N-Dimensional Arrays
+#
+# ✔ Mathematical Functions
+#
+# ✔ Statistical Functions
+#
+# ✔ Linear Algebra
+#
+# ✔ Broadcasting
+#
+# ✔ Indexing & Slicing
+#
+# ✔ Random Module
+#
+# ✔ Universal Functions (ufuncs)
+#
+# ✔ Easy Integration with Pandas, Matplotlib, Scikit-Learn, TensorFlow, etc.
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Benefits of NumPy
+# -----------------------------------------------------------------------------------------------------
+#
+# 1. Very Fast
+#
+# Arrays are written in C language internally.
+#
+# Therefore they execute much faster than Python Lists.
+#
+#
+# 2. Memory Efficient
+#
+# Lists store references to objects.
+#
+# NumPy stores data in contiguous memory.
+#
+# Hence it consumes less memory.
+#
+#
+# 3. Easy Mathematical Operations
+#
+# We can directly perform:
+#
+# +  -  *  /  **
+#
+# on entire arrays.
+#
+#
+# 4. Supports Multi-dimensional Arrays
+#
+# 1D Array
+#
+# [1 2 3]
+#
+#
+# 2D Array
+#
+# [[1 2]
+#  [3 4]]
+#
+#
+# 3D Array
+#
+# [[[1 2]
+#   [3 4]]]
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Advantages of NumPy
+# -----------------------------------------------------------------------------------------------------
+#
+# ✔ Faster Execution
+#
+# ✔ Less Memory Usage
+#
+# ✔ Cleaner Code
+#
+# ✔ Powerful Mathematical Library
+#
+# ✔ Easy Data Manipulation
+#
+# ✔ Excellent for Scientific Computing
+#
+# ✔ Best for Machine Learning
+#
+# ✔ Easy Matrix Operations
+#
+# ✔ Supports Broadcasting
+#
+# ✔ Large Community Support
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Disadvantages of NumPy
+# -----------------------------------------------------------------------------------------------------
+#
+# ❌ Stores only same data type in one array.
+#
+# Example:
+#
+# [1,2,3]
+#
+# Good
+#
+#
+# [1,"Hello",5]
+#
+# Not recommended because NumPy converts elements to a common type.
+#
+#
+# ❌ Slightly difficult for beginners initially.
+#
+#
+# ❌ Not suitable for non-numerical complex data structures.
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Where is NumPy Used?
+# -----------------------------------------------------------------------------------------------------
+#
+# ✔ Artificial Intelligence (AI)
+#
+# ✔ Machine Learning (ML)
+#
+# ✔ Deep Learning
+#
+# ✔ Data Science
+#
+# ✔ Data Analytics
+#
+# ✔ Scientific Research
+#
+# ✔ Computer Vision
+#
+# ✔ Image Processing
+#
+# ✔ Robotics
+#
+# ✔ Finance
+#
+# ✔ Statistics
+#
+# ✔ Game Development
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Popular Libraries Built on NumPy
+# -----------------------------------------------------------------------------------------------------
+#
+# Pandas
+# ↓
+# Uses NumPy Arrays internally.
+#
+#
+# Matplotlib
+# ↓
+# Uses NumPy arrays for plotting graphs.
+#
+#
+# Scikit-Learn
+# ↓
+# Machine Learning library built on NumPy.
+#
+#
+# TensorFlow
+# ↓
+# Works efficiently with NumPy arrays.
+#
+#
+# PyTorch
+# ↓
+# Supports NumPy interoperability.
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Installation
+# -----------------------------------------------------------------------------------------------------
+#
+# Install NumPy using pip:
+#
+# pip install numpy
+#
+#
+# Import NumPy:
+#
+# import numpy as np
+#
+#
+# Here,
+#
+# numpy → Library Name
+#
+# np → Alias (short name)
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Why do we write "import numpy as np"?
+# -----------------------------------------------------------------------------------------------------
+#
+# Instead of writing:
+#
+# numpy.array()
+#
+# We simply write:
+#
+# np.array()
+#
+# It makes code shorter and is the standard convention used by developers.
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# NumPy vs Python List
+# -----------------------------------------------------------------------------------------------------
+#
+# Python List
+# -----------
+# ✔ Can store different data types
+# ✔ Slower
+# ✔ More memory
+# ✔ Requires loops for calculations
+#
+#
+# NumPy Array
+# -----------
+# ✔ Faster
+# ✔ Less memory
+# ✔ Vectorized operations
+# ✔ Mathematical functions available
+# ✔ Better for large datasets
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Interview Questions
+# -----------------------------------------------------------------------------------------------------
+#
+# Q1. What is NumPy?
+#
+# Ans:
+# NumPy is a Python library used for numerical and scientific computing.
+# It provides high-performance N-dimensional arrays and mathematical functions.
+#
+#
+# Q2. What is ndarray?
+#
+# Ans:
+# ndarray is the main data structure of NumPy.
+# It stores homogeneous (same data type) elements efficiently.
+#
+#
+# Q3. Why is NumPy faster than Python Lists?
+#
+# Ans:
+# Because:
+# • Written in C
+# • Uses contiguous memory
+# • Supports vectorization
+#
+#
+# Q4. What is Vectorization?
+#
+# Ans:
+# Performing operations on the entire array without using loops.
+#
+#
+# Q5. Why do we import NumPy as np?
+#
+# Ans:
+# To write shorter, cleaner code. It is the standard convention.
+#
+#
+# Q6. Can NumPy store multiple data types?
+#
+# Ans:
+# A NumPy array is designed to store elements of the same data type.
+# If mixed types are provided, NumPy converts them to a common compatible type.
+#
+#
+# -----------------------------------------------------------------------------------------------------
+# Quick Revision
+# -----------------------------------------------------------------------------------------------------
+#
+# Full Form:
+# Numerical Python
+#
+# Main Data Structure:
+# ndarray
+#
+# Used For:
+# Numerical Computing
+#
+# Faster Than:
+# Python Lists
+#
+# Written In:
+# C Language (core implementation)
+#
+# Biggest Advantage:
+# Fast Mathematical Calculations
+#
+# Best Used In:
+# AI
+# Machine Learning
+# Data Science
+# Deep Learning
+# Scientific Computing
+#
+# Standard Import:
+# import numpy as np
+#
+# =====================================================================================================
+# End of NumPy Introduction Notes
+# =====================================================================================================

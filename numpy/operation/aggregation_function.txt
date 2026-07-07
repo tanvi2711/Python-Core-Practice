@@ -1,0 +1,26 @@
+# ==========================================
+#     NumPy Aggregation Functions
+# ==========================================
+
+# Aggregation functions combine multiple
+# array elements and return a single value.
+
+# Common Aggregation Functions:
+# np.sum()      -> Sum of all elements
+# np.mean()     -> Average (Mean)
+# np.min()      -> Smallest value
+# np.max()      -> Largest value
+# np.std()      -> Standard Deviation
+# np.var()      -> Variance
+# np.prod()     -> Product of all elements
+# np.cumsum()   -> Cumulative Sum
+# np.median()   -> Middle value
+
+# axis Parameter:
+# axis=0 -> Column-wise operation
+# axis=1 -> Row-wise operation
+
+# Benefits:
+# ✔ Fast calculations
+# ✔ No loops required
+# ✔ Used in Data Analysis, AI & Machine Learning
