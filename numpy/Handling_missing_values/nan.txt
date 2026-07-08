@@ -1,0 +1,37 @@
+# ==========================================
+# NaN (Not a Number) - Short Notes
+# ==========================================
+
+# NaN stands for "Not a Number".
+
+# It is a special floating-point value used to
+# represent missing, undefined, or invalid
+# numerical data.
+
+# In NumPy, NaN is represented as:
+# np.nan
+
+# Why is NaN used?
+# - Represents missing values.
+# - Marks unknown or unavailable data.
+# - Indicates invalid mathematical results.
+
+# Important:
+# - NaN is of float type.
+# - If an array contains np.nan, NumPy converts
+#   the array to a floating-point type.
+
+# Regular NumPy functions such as:
+# np.sum(), np.mean(), np.max()
+# may return NaN if the array contains NaN.
+
+# To ignore missing values, use:
+# np.nansum()
+# np.nanmean()
+# np.nanmax()
+# np.nanmin()
+
+# Interview Definition:
+# NaN (Not a Number) is a special floating-point
+# value used in NumPy to represent missing,
+# undefined, or invalid numerical data.

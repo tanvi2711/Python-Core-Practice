@@ -1,0 +1,187 @@
+How numpy handels different shapew arrays in broadcasting
+
+1) Matching Dimensions
+ex: 
+    arr1+arr2
+    [1,2,3]+[4,5,6]
+    [5,7,9]
+
+2) Expanding single elements
+ex: 
+    arr1 + arr2
+    [1,2,3] + [10]
+    [11,12,13]
+
+3) Incompatible shapes
+ex:
+    [1,2,3]+[2,3]
+    It will raise error 
+
+
+
+# ==========================================
+# How NumPy Handles Different-Shaped Arrays
+# (Broadcasting)
+# ==========================================
+
+Broadcasting is the process by which NumPy automatically
+makes arrays with different shapes compatible for
+element-wise operations.
+
+Instead of creating extra copies of data, NumPy virtually
+expands the smaller array whenever possible.
+
+----------------------------------------------------------
+Rule 1: Matching Dimensions
+----------------------------------------------------------
+
+If both arrays have the same shape, NumPy performs
+element-wise operations directly.
+
+Example:
+
+arr1 = [1, 2, 3]
+arr2 = [4, 5, 6]
+
+arr1 + arr2
+
+Result:
+[5, 7, 9]
+
+Working:
+
+1 + 4 = 5
+2 + 5 = 7
+3 + 6 = 9
+
+Shape:
+(3,) + (3,)  ✔ Compatible
+
+
+----------------------------------------------------------
+Rule 2: Expanding Single Elements (Broadcasting)
+----------------------------------------------------------
+
+If one array contains only one element (or has a dimension
+of size 1), NumPy automatically broadcasts (expands) it
+to match the shape of the other array.
+
+Example:
+
+arr1 = [1, 2, 3]
+arr2 = [10]
+
+arr1 + arr2
+
+Result:
+[11, 12, 13]
+
+Backend Working:
+
+Original:
+
+arr1
+[1 2 3]
+
+arr2
+[10]
+
+NumPy behaves as if:
+
+[10 10 10]
+
+Then performs:
+
+[1 2 3]
++
+[10 10 10]
+=
+[11 12 13]
+
+NOTE:
+NumPy DOES NOT actually create [10 10 10].
+It only behaves as if it exists.
+This makes broadcasting memory efficient.
+
+Shape:
+
+(3,) + (1,) ✔ Compatible
+
+
+----------------------------------------------------------
+Rule 3: Incompatible Shapes
+----------------------------------------------------------
+
+If the shapes cannot be matched according to the
+broadcasting rules, NumPy raises a ValueError.
+
+Example:
+
+arr1 = [1, 2, 3]
+arr2 = [2, 3]
+
+arr1 + arr2
+
+Result:
+
+ValueError:
+operands could not be broadcast together
+
+Reason:
+
+Shape of arr1 = (3,)
+Shape of arr2 = (2,)
+
+Since neither dimension is equal nor one of them is 1,
+broadcasting is not possible.
+
+(3,) + (2,) ✘ Not Compatible
+
+
+----------------------------------------------------------
+Broadcasting Rules Summary
+----------------------------------------------------------
+
+Rule 1:
+If dimensions are equal
+✔ Operation is allowed.
+
+Example:
+(3,) + (3,)
+
+----------------------------------------------------------
+
+Rule 2:
+If one dimension is 1
+✔ NumPy stretches that dimension automatically.
+
+Example:
+(3,) + (1,)
+
+----------------------------------------------------------
+
+Rule 3:
+If dimensions are different and neither is 1
+✘ NumPy raises ValueError.
+
+Example:
+(3,) + (2,)
+
+----------------------------------------------------------
+Advantages of Broadcasting
+----------------------------------------------------------
+
+✔ No loops required.
+✔ Faster execution.
+✔ Memory efficient.
+✔ Cleaner and shorter code.
+✔ Automatic element-wise operations.
+
+----------------------------------------------------------
+Interview Definition
+----------------------------------------------------------
+
+Broadcasting is a NumPy mechanism that automatically
+expands the smaller array (or scalar) to match the shape
+of the larger array, allowing element-wise operations
+without creating unnecessary copies of data.

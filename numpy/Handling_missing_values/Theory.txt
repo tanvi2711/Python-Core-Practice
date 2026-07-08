@@ -1,0 +1,60 @@
+# ==========================================
+# Handling Missing Values in NumPy
+# ==========================================
+
+# Missing Values:
+# Missing values represent data that is unavailable,
+# unknown, or not recorded.
+
+# In NumPy, missing values are commonly represented as:
+# np.nan (Not a Number)
+
+# Why Handle Missing Values?
+# - Prevents incorrect calculations.
+# - Improves data quality.
+# - Required before data analysis or Machine Learning.
+# - Avoids unexpected results in mathematical operations.
+
+# When to Handle Missing Values?
+# - Before data analysis.
+# - Before visualization.
+# - Before training Machine Learning models.
+# - Whenever the dataset contains missing entries.
+
+# Common Functions
+
+# np.isnan()
+# Checks whether an element is NaN.
+# Returns True for missing values, otherwise False.
+
+# np.nan_to_num()
+# Replaces NaN with a specified value (default is 0).
+
+# np.nanmean()
+# Calculates the mean while ignoring NaN values.
+
+# np.nansum()
+# Calculates the sum while ignoring NaN values.
+
+# np.nanmax()
+# Finds the maximum value while ignoring NaN values.
+
+# np.nanmin()
+# Finds the minimum value while ignoring NaN values.
+
+# np.isinf()
+detect infinite values
+
+# Note:
+# Regular NumPy functions like np.mean() and np.sum()
+# may return NaN if the array contains NaN values.
+# Use the 'nan' versions of these functions to ignore
+# missing values.
+
+# ==========================================
+# Interview Definition
+# ==========================================
+
+# Handling missing values is the process of detecting,
+# replacing, or ignoring missing data (np.nan) so that
+# calculations and analysis produce accurate results.

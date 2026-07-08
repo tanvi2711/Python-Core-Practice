@@ -1,0 +1,46 @@
+# ==========================================
+# NumPy Broadcasting - Short Notes
+# ==========================================
+
+# Broadcasting:
+# Broadcasting is a NumPy feature that allows arrays
+# of different shapes to perform element-wise operations
+# without explicitly making them the same size.
+
+# Why use Broadcasting?
+# - Eliminates the need for loops.
+# - Faster execution.
+# - Memory efficient (does not create unnecessary copies).
+# - Makes code shorter and cleaner.
+
+# Broadcasting Rules:
+# 1. If dimensions are equal -> Operation is allowed.
+# 2. If one dimension is 1 -> NumPy stretches that dimension.
+# 3. If dimensions are incompatible -> ValueError is raised.
+
+# Example 1: Scalar Broadcasting
+# [10 20 30] + 5
+# Result: [15 25 35]
+
+# Example 2: Array Broadcasting
+# Matrix:
+# [[1 2 3]
+#  [4 5 6]]
+#
+# Array:
+# [10 20 30]
+#
+# Result:
+# [[11 22 33]
+#  [14 25 36]]
+
+# Broadcasting works with:
+# - Addition (+)
+# - Subtraction (-)
+# - Multiplication (*)
+# - Division (/)
+# - Other element-wise operations
+
+# Note:
+# Broadcasting does NOT physically copy the smaller array.
+# NumPy only behaves as if the smaller array were expanded.

@@ -1,0 +1,137 @@
+# ==========================================
+# NumPy Vectorization - Short Notes
+# ==========================================
+
+Vectorization:
+Vectorization is the process of performing operations
+on an entire NumPy array at once without using Python loops.
+
+Instead of processing one element at a time,
+NumPy performs the operation on all elements together.
+
+----------------------------------------------------------
+Why Use Vectorization?
+----------------------------------------------------------
+
+✔ Faster execution.
+✔ No explicit for loops.
+✔ Cleaner and shorter code.
+✔ Memory efficient.
+✔ Uses optimized C implementation internally.
+
+----------------------------------------------------------
+Example
+----------------------------------------------------------
+
+Without Vectorization (Using Loop)
+
+arr = [10, 20, 30, 40]
+
+result = []
+
+for i in arr:
+    result.append(i * 2)
+
+Output:
+[20, 40, 60, 80]
+
+----------------------------------------------------------
+
+With Vectorization (NumPy)
+
+import numpy as np
+
+arr = np.array([10, 20, 30, 40])
+
+result = arr * 2
+
+Output:
+[20 40 60 80]
+
+----------------------------------------------------------
+Operations Supported
+----------------------------------------------------------
+
+✔ Addition (+)
+✔ Subtraction (-)
+✔ Multiplication (*)
+✔ Division (/)
+✔ Modulus (%)
+✔ Power (**)
+✔ Comparison (>, <, ==, !=)
+
+----------------------------------------------------------
+Advantages
+----------------------------------------------------------
+
+✔ Faster than Python loops.
+✔ Less code to write.
+✔ Easy to read.
+✔ Optimized for large datasets.
+✔ Better performance in Data Science and AI.
+
+----------------------------------------------------------
+Interview Definition
+----------------------------------------------------------
+
+Vectorization is the technique of applying an operation
+to an entire NumPy array at once without using explicit
+Python loops, resulting in faster and more efficient code.
+
+
+# ==========================================
+# Difference Between Vectorization and Broadcasting
+# ==========================================
+
+Vectorization
+--------------------------------------------------
+- Performs operations on entire arrays without
+  using Python loops.
+- Usually works when arrays have the same shape.
+- Focuses on speed and eliminating loops.
+- Example:
+  [1,2,3] + [4,5,6]
+- Uses optimized C implementation internally.
+
+--------------------------------------------------
+
+Broadcasting
+--------------------------------------------------
+- Makes arrays of different shapes compatible
+  for element-wise operations.
+- Works when array shapes satisfy broadcasting rules.
+- Focuses on shape compatibility.
+- Example:
+  [1,2,3] + 10
+  or
+  (2,3) + (3,)
+- Uses virtual expansion (does not actually copy data).
+
+--------------------------------------------------
+Easy Way to Remember
+--------------------------------------------------
+
+Vectorization = "How the operation is performed."
+(Whole arrays are processed together without loops.)
+
+Broadcasting = "How different-shaped arrays become compatible."
+(NumPy automatically expands the smaller array whenever possible.)
+
+--------------------------------------------------
+Relationship
+--------------------------------------------------
+
+Broadcasting and Vectorization often work together.
+
+Example:
+
+arr = np.array([10, 20, 30])
+
+result = arr * 2
+
+Broadcasting:
+Scalar 2 is virtually expanded to [2, 2, 2].
+
+Vectorization:
+The multiplication is performed on the entire array
+at once without using a Python loop.
