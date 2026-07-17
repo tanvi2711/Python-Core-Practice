@@ -1,0 +1,53 @@
+Selecting and Filtering Data in Pandas
+
+
+1. Selecting Specific Columns
+Used to retrieve one or more columns from a DataFrame.
+Single Column
+   Returns a Series
+   Uses square bracket notation []
+Multiple Columns
+   Returns a DataFrame
+   Uses double square brackets [[]]
+
+column=df["column name"]
+subset=df["Col1","col2","...."]
+
+
+2. Filtering Rows
+Used to extract rows that satisfy one or more conditions.
+Boolean Conditions
+   Returns only the rows where the condition is True
+Comparison Operators
+   == (Equal to)
+   != (Not equal to)
+   > (Greater than)
+   < (Less than)
+   >= (Greater than or equal to)
+   <= (Less than or equal to)
+
+filtered_rows=df[df["Salary"]>50000]
+
+
+
+3. Combining Multiple Conditions
+Used to apply more than one condition while filtering data.
+   AND (&) – All conditions must be True
+   OR (|) – At least one condition must be True
+   NOT (~) – Reverses the Boolean condition
+
+Note: Always enclose each condition in parentheses () when using & or |.
+
+filtered_rows=df[(df["Salary"]>50000 & df["Salary"]<80000)]
+
+
+Methods Used
+1. Square Bracket Notation []
+   Select a single column
+   Select multiple columns
+   Filter rows using Boolean conditions
+2. Boolean Indexing
+   Filters rows based on one or more Boolean conditions.
+   Returns only the rows where the condition evaluates to True.
+
+

@@ -1,0 +1,15 @@
+Data Summarization
+
+Number of Rows and Columns – Understand the size of the dataset.
+
+Data Types – Identify the data type of each column (e.g., int, float, object, bool, datetime).
+
+Missing Values – Check for null or missing values in each column.
+
+Duplicate Records – Identify duplicate rows in the dataset.
+
+Summary Statistics – View statistical information such as count, mean, median, min, max, and standard deviation (for numerical data).
+
+Column Names – Review all feature/column names.
+
+Memory Usage – Check how much memory the dataset occupies (useful for large datasets).
