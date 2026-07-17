@@ -1,0 +1,51 @@
+teacher_id,first_name,last_name,gender,email,department,designation,qualification,experience_years,salary,teacher_rating,quality_score,joining_date
+TR001,Sneha,Sharma,Male,sneha.sharma238@eduinsights.com,Power BI,Assistant Trainer,PhD,9,945580,4.55,91,2025-08-04 01:03:04.604654
+TR002,Amit,Gupta,Male,amit.gupta584@eduinsights.com,Machine Learning,Principal Instructor,MBA,8,715574,4.11,91,2026-02-11 01:03:04.610206
+TR003,Neha,Chauhan,Female,neha.chauhan294@eduinsights.com,Power BI,Trainer,M.Sc,14,953587,4.26,100,2018-03-18 01:03:04.610310
+TR004,Pooja,Jain,Male,pooja.jain757@eduinsights.com,Artificial Intelligence,Principal Instructor,B.Tech,9,1383548,4.43,99,2019-09-08 01:03:04.610356
+TR005,Divya,Mishra,Male,divya.mishra731@eduinsights.com,Python,Assistant Trainer,M.Tech,12,1305310,4.37,100,2021-01-14 01:03:04.610395
+TR006,Sneha,Joshi,Female,sneha.joshi660@eduinsights.com,Business Analytics,Trainer,M.Sc,9,1086264,4.33,95,2024-08-29 01:03:04.610439
+TR007,Divya,Mehta,Male,divya.mehta177@eduinsights.com,Artificial Intelligence,Lead Instructor,M.Sc,6,892002,3.95,84,2025-01-02 01:03:04.610483
+TR008,Ananya,Naik,Female,ananya.naik420@eduinsights.com,Statistics,Assistant Trainer,M.Tech,2,548682,4.11,68,2021-06-29 01:03:04.610521
+TR009,Nisha,Joshi,Male,nisha.joshi281@eduinsights.com,Power BI,Trainer,PhD,15,1182579,4.36,100,2016-08-26 01:03:04.610562
+TR010,Varun,Joshi,Male,varun.joshi151@eduinsights.com,Data Visualization,Lead Instructor,B.Tech,12,1296247,4.23,100,2022-10-31 01:03:04.610598
+TR011,Neha,Pandey,Male,neha.pandey404@eduinsights.com,Data Engineering,Principal Instructor,MBA,14,1177408,4.35,100,2026-01-01 01:03:04.610633
+TR012,Sneha,Mehta,Female,sneha.mehta797@eduinsights.com,Business Analytics,Assistant Trainer,M.Sc,18,1627942,4.58,100,2020-05-09 01:03:04.610669
+TR013,Akash,Pandey,Male,akash.pandey901@eduinsights.com,Statistics,Principal Instructor,PhD,6,704286,3.91,81,2014-03-01 01:03:04.611767
+TR014,Akash,Mishra,Female,akash.mishra510@eduinsights.com,SQL,Assistant Trainer,M.Sc,1,480612,3.67,62,2013-07-15 01:03:04.611843
+TR015,Amit,Patel,Male,amit.patel788@eduinsights.com,Data Visualization,Trainer,M.Tech,16,1745899,4.74,100,2022-07-23 01:03:04.611881
+TR016,Arjun,Singh,Female,arjun.singh997@eduinsights.com,Machine Learning,Principal Instructor,M.Tech,20,1773790,4.66,100,2017-11-19 01:03:04.611917
+TR017,Sanjay,Mishra,Female,sanjay.mishra133@eduinsights.com,Machine Learning,Trainer,B.Tech,17,1577254,4.51,100,2021-02-05 01:03:04.612005
+TR018,Varun,Gupta,Male,varun.gupta734@eduinsights.com,SQL,Trainer,B.Tech,1,408234,4.1,60,2014-09-24 01:03:04.612045
+TR019,Ananya,Iyer,Male,ananya.iyer562@eduinsights.com,Power BI,Principal Instructor,PhD,16,1647815,4.62,100,2017-02-17 01:03:04.612079
+TR020,Vivek,Patel,Female,vivek.patel372@eduinsights.com,Data Engineering,Lead Instructor,MBA,4,628401,4.27,81,2024-01-20 01:03:04.612112
+TR021,Priya,Joshi,Male,priya.joshi264@eduinsights.com,Machine Learning,Trainer,PhD,11,1135202,4.28,100,2020-01-06 01:03:04.612145
+TR022,Sanjay,Gupta,Female,sanjay.gupta837@eduinsights.com,Data Visualization,Assistant Trainer,B.Tech,3,570955,4.2,67,2024-03-02 01:03:04.612178
+TR023,Ananya,Verma,Female,ananya.verma502@eduinsights.com,Machine Learning,Lead Instructor,B.Tech,14,986317,4.43,100,2020-04-24 01:03:04.612217
+TR024,Sanjay,Iyer,Female,sanjay.iyer168@eduinsights.com,Machine Learning,Senior Trainer,M.Tech,14,930662,4.55,100,2024-11-22 01:03:04.612252
+TR025,Karan,Sharma,Female,karan.sharma524@eduinsights.com,Data Visualization,Trainer,B.Tech,2,533124,3.56,65,2024-09-21 01:03:04.612285
+TR026,Divya,Patel,Female,divya.patel132@eduinsights.com,Excel,Trainer,PhD,8,620836,4.23,93,2013-03-03 01:03:04.612319
+TR027,Varun,Singh,Female,varun.singh219@eduinsights.com,Business Analytics,Trainer,M.Sc,11,1107505,4.28,100,2019-07-14 01:03:04.612352
+TR028,Sanjay,Reddy,Male,sanjay.reddy479@eduinsights.com,Excel,Principal Instructor,B.Tech,3,419204,3.88,75,2020-04-24 01:03:04.612386
+TR029,Rohan,Mishra,Male,rohan.mishra910@eduinsights.com,Machine Learning,Senior Trainer,M.Sc,12,982704,4.46,100,2019-06-23 01:03:04.612419
+TR030,Divya,Pandey,Male,divya.pandey693@eduinsights.com,Data Visualization,Senior Trainer,B.Tech,17,1470407,4.63,100,2013-11-07 01:03:04.612453
+TR031,Rohan,Iyer,Male,rohan.iyer744@eduinsights.com,Business Analytics,Trainer,M.Sc,10,1164979,4.49,95,2024-03-10 01:03:04.612486
+TR032,Aditya,Naik,Male,aditya.naik13@eduinsights.com,Business Analytics,Trainer,M.Sc,9,984715,4.64,99,2016-09-01 01:03:04.612520
+TR033,Kavya,Sharma,Male,kavya.sharma977@eduinsights.com,Power BI,Principal Instructor,B.Tech,4,793575,4.21,73,2016-08-15 01:03:04.612558
+TR034,Rohan,Sharma,Female,rohan.sharma930@eduinsights.com,SQL,Senior Trainer,M.Tech,10,1257599,4.35,96,2018-04-30 01:03:04.612594
+TR035,Kavya,Mishra,Male,kavya.mishra957@eduinsights.com,Machine Learning,Trainer,M.Tech,14,1362115,4.45,100,2018-10-23 01:03:04.612628
+TR036,Aditya,Pandey,Female,aditya.pandey173@eduinsights.com,Python,Lead Instructor,B.Tech,8,846777,3.96,94,2018-06-02 01:03:04.612663
+TR037,Meera,Naik,Male,meera.naik34@eduinsights.com,Machine Learning,Lead Instructor,M.Sc,8,746068,4.41,91,2018-05-21 01:03:04.612748
+TR038,Akash,Joshi,Female,akash.joshi971@eduinsights.com,SQL,Assistant Trainer,M.Sc,18,1493620,4.79,100,2025-05-27 01:03:04.612784
+TR039,Sneha,Jain,Female,sneha.jain756@eduinsights.com,Business Analytics,Lead Instructor,PhD,14,1168132,4.27,100,2021-12-30 01:03:04.612817
+TR040,Arjun,Sharma,Male,arjun.sharma542@eduinsights.com,Data Visualization,Trainer,M.Sc,14,1126124,4.24,100,2018-11-09 01:03:04.612850
+TR041,Divya,Reddy,Female,divya.reddy529@eduinsights.com,Statistics,Lead Instructor,M.Sc,4,810973,4.29,79,2023-05-29 01:03:04.612889
+TR042,Vivek,Joshi,Male,vivek.joshi640@eduinsights.com,Excel,Senior Trainer,MBA,13,1187276,4.7,100,2019-10-29 01:03:04.612923
+TR043,Vivek,Joshi,Female,vivek.joshi486@eduinsights.com,Artificial Intelligence,Lead Instructor,M.Tech,19,1668002,4.74,100,2024-05-11 01:03:04.613000
+TR044,Meera,Singh,Female,meera.singh105@eduinsights.com,Machine Learning,Senior Trainer,M.Tech,20,1504401,4.57,100,2020-10-08 01:03:04.613040
+TR045,Nisha,Jain,Female,nisha.jain434@eduinsights.com,Excel,Trainer,MBA,3,529598,3.78,69,2026-02-19 01:03:04.613074
+TR046,Sneha,Pandey,Male,sneha.pandey190@eduinsights.com,Data Visualization,Lead Instructor,B.Tech,14,1192241,4.35,100,2016-01-09 01:03:04.613109
+TR047,Rohan,Pandey,Female,rohan.pandey982@eduinsights.com,Artificial Intelligence,Principal Instructor,PhD,15,1123735,4.7,100,2016-04-05 01:03:04.613143
+TR048,Neha,Chauhan,Female,neha.chauhan275@eduinsights.com,Machine Learning,Senior Trainer,PhD,16,1654068,4.81,100,2016-05-24 01:03:04.613177
+TR049,Amit,Chauhan,Male,amit.chauhan288@eduinsights.com,Business Analytics,Senior Trainer,PhD,10,942245,4.28,98,2017-09-02 01:03:04.613209
+TR050,Rohan,Chauhan,Male,rohan.chauhan434@eduinsights.com,Data Engineering,Senior Trainer,PhD,7,844278,4.09,86,2016-11-02 01:03:04.613245

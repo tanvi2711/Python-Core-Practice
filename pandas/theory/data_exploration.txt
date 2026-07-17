@@ -1,0 +1,27 @@
+Data Exploration (Exploratory Data Analysis - EDA)
+
+Objectives of Data Exploration
+
+Understand the Dataset
+Examine the structure, size, columns, and data types.
+Get familiar with the available data.
+
+
+Identify Data Quality Issues
+Detect missing values, duplicate records, incorrect data types, and outliers.
+Ensure the data is clean and reliable.
+
+
+Identify the Problem or Business Objective
+Understand what question needs to be answered.
+Define the goal of the analysis.
+
+
+Explore the Data
+Analyze distributions, relationships, patterns, and trends.
+Generate initial insights.
+
+
+Plan the Next Steps
+Decide what preprocessing, feature engineering, visualization, or modeling is required.
+Create a roadmap for further analysis.
