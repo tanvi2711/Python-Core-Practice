@@ -1,0 +1,286 @@
+# Pandas – Handling Missing Data (Data Cleaning Notes)
+
+## 1. What is Missing Data?
+
+Missing data refers to values that are unavailable or unknown in a dataset.
+
+In Pandas, missing values are usually represented as:
+
+* **NaN (Not a Number)** – Used for missing numeric values.
+* **None** – Python's null value (also treated as missing by Pandas).
+
+### Causes of Missing Data
+
+* Manual data entry errors
+* Sensor or system failures
+* Incomplete surveys or forms
+* File import issues
+* Data corruption
+
+---
+
+# 2. Why Handle Missing Data?
+
+Missing values can:
+
+* Produce incorrect analysis
+* Reduce machine learning model accuracy
+* Cause errors during calculations
+* Affect graphs and visualizations
+* Lead to unreliable business decisions
+
+**Handling missing data improves data quality and ensures accurate analysis.**
+
+---
+
+# 3. Detect Missing Values
+
+### Functions
+
+```python
+df.isnull()
+df.isna()
+```
+
+> **Note:** `isnull()` and `isna()` perform the same function. They are aliases of each other.
+
+### Count Missing Values in Each Column
+
+```python
+df.isnull().sum()
+```
+
+### Count Total Missing Values
+
+```python
+df.isnull().sum().sum()
+```
+
+### Check if Any Missing Values Exist
+
+```python
+df.isnull().any()
+```
+
+### Check if All Values are Missing
+
+```python
+df.isnull().all()
+```
+
+---
+
+# 4. Remove Missing Data
+
+### Method
+
+```python
+dropna()
+```
+
+### Syntax
+
+```python
+df.dropna()
+```
+
+### Common Options
+
+| Parameter           | Description                                       |
+| ------------------- | ------------------------------------------------- |
+| `axis=0`            | Remove rows containing missing values.            |
+| `axis=1`            | Remove columns containing missing values.         |
+| `how='any'`         | Remove if any value is missing.                   |
+| `how='all'`         | Remove only if all values are missing.            |
+| `thresh=n`          | Keep rows with at least **n non-missing values**. |
+| `subset=['Column']` | Check missing values only in selected columns.    |
+| `inplace=True`      | Permanently modify the original DataFrame.        |
+
+---
+
+# 5. Fill Missing Data
+
+### Method
+
+```python
+fillna()
+```
+
+### Syntax
+
+```python
+df.fillna(value)
+```
+
+### Common Methods
+
+* Fill with `0`
+* Fill with a fixed value
+* Fill with **Mean**
+* Fill with **Median**
+* Fill with **Mode**
+
+### Examples
+
+```python
+df['Age'].fillna(df['Age'].mean())
+
+df['Salary'].fillna(df['Salary'].median())
+
+df['City'].fillna(df['City'].mode()[0])
+```
+
+---
+
+# 6. Forward Fill (ffill)
+
+### Method
+
+```python
+ffill()
+```
+
+Copies the **previous valid value** into missing cells.
+
+### Syntax
+
+```python
+df.ffill()
+```
+
+### Used For
+
+* Time-series data
+* Sequential records
+
+---
+
+# 7. Backward Fill (bfill)
+
+### Method
+
+```python
+bfill()
+```
+
+Copies the **next valid value** into missing cells.
+
+### Syntax
+
+```python
+df.bfill()
+```
+
+### Used For
+
+* Time-series data
+* Sequential records
+
+---
+
+# 8. Interpolation
+
+### Method
+
+```python
+interpolate()
+```
+
+Estimates missing numeric values using nearby values.
+
+### Syntax
+
+```python
+df.interpolate()
+```
+
+### Used For
+
+* Continuous numeric data
+* Time-series datasets
+
+---
+
+# 9. Replace Missing Values
+
+### Method
+
+```python
+replace()
+```
+
+### Example
+
+```python
+df.replace("", pd.NA)
+```
+
+Useful when datasets use blank strings (`""`), `"N/A"`, `"NULL"` or custom symbols instead of `NaN`.
+
+---
+
+# 10. Data Cleaning Process
+
+A typical data cleaning workflow:
+
+1. Load the dataset.
+2. Inspect the data.
+3. Detect missing values.
+4. Remove duplicate records.
+5. Handle missing values.
+6. Correct data types.
+7. Remove unwanted rows or columns.
+8. Rename columns if required.
+9. Handle outliers (if necessary).
+10. Save the cleaned dataset.
+
+---
+
+# 11. Useful Data Cleaning Functions
+
+```python
+isnull()
+isna()
+notnull()
+dropna()
+fillna()
+ffill()
+bfill()
+interpolate()
+replace()
+duplicated()
+drop_duplicates()
+astype()
+```
+
+---
+
+# 12. Best Practices
+
+* Never remove data without checking its importance.
+* Use **Mean** for normally distributed numeric data.
+* Use **Median** when outliers are present.
+* Use **Mode** for categorical columns.
+* Verify the missing-value count after cleaning.
+* Save the cleaned dataset separately instead of overwriting the original.
+
+---
+
+# Interview Questions
+
+1. What is NaN in Pandas?
+2. What is the difference between `isnull()` and `isna()`?
+3. What is the difference between `fillna()` and `dropna()`?
+4. When should you use Mean, Median, and Mode?
+5. What is the difference between `ffill()` and `bfill()`?
+6. What is interpolation?
+7. What does `inplace=True` do?
+8. How do you count missing values in each column?
+9. How do you count the total number of missing values in a DataFrame?
+10. Why shouldn't you always use `dropna()`?
+
+---
+
+# Summary
+
+Handling missing data is one of the most important steps in **data cleaning**. Pandas provides powerful functions such as `isnull()`, `dropna()`, `fillna()`, `ffill()`, `bfill()`, and `interpolate()` to detect, remove, and replace missing values. Proper handling of missing data improves data quality and prepares datasets for **data analysis** and **machine learning**.

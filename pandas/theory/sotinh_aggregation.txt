@@ -1,0 +1,234 @@
+# Pandas – Sorting and Aggregation (Theory Notes)
+
+# 1. Sorting in Pandas
+
+## What is Sorting?
+
+Sorting is the process of arranging data in **ascending** or **descending** order based on one or more columns.
+
+It helps to:
+
+* Organize data for better readability.
+* Find highest or lowest values.
+* Prepare data for analysis and reporting.
+
+---
+
+## Method
+
+```python
+sort_values()
+```
+
+### Syntax
+
+```python
+df.sort_values(by='Column_Name')
+```
+
+---
+
+## Common Parameters
+
+| Parameter           | Description                         |
+| ------------------- | ----------------------------------- |
+| `by`                | Column(s) used for sorting.         |
+| `ascending=True`    | Sort in ascending order (Default).  |
+| `ascending=False`   | Sort in descending order.           |
+| `inplace=True`      | Permanently modifies the DataFrame. |
+| `ignore_index=True` | Resets the index after sorting.     |
+
+---
+
+## Examples
+
+### Sort by a Single Column
+
+```python
+df.sort_values(by='Salary')
+```
+
+### Sort in Descending Order
+
+```python
+df.sort_values(by='Salary', ascending=False)
+```
+
+### Sort by Multiple Columns
+
+```python
+df.sort_values(by=['Department', 'Salary'])
+```
+
+### Sort by Multiple Columns with Different Orders
+
+```python
+df.sort_values(
+    by=['Department', 'Salary'],
+    ascending=[True, False]
+)
+```
+
+---
+
+## Sorting Index
+
+### Method
+
+```python
+sort_index()
+```
+
+### Syntax
+
+```python
+df.sort_index()
+```
+
+Sorts the DataFrame based on its row index.
+
+---
+
+# 2. Aggregation in Pandas
+
+## What is Aggregation?
+
+Aggregation is the process of performing calculations on a column or a group of rows to produce a summary value.
+
+Aggregation is commonly used to calculate:
+
+* Total
+* Average
+* Maximum
+* Minimum
+* Count
+* Standard Deviation
+
+---
+
+## Common Aggregation Functions
+
+| Function     | Description                                  |
+| ------------ | -------------------------------------------- |
+| `sum()`      | Returns the total of values.                 |
+| `mean()`     | Returns the average value.                   |
+| `median()`   | Returns the middle value.                    |
+| `mode()`     | Returns the most frequently occurring value. |
+| `max()`      | Returns the highest value.                   |
+| `min()`      | Returns the lowest value.                    |
+| `count()`    | Counts non-missing values.                   |
+| `std()`      | Calculates standard deviation.               |
+| `var()`      | Calculates variance.                         |
+| `prod()`     | Returns the product of all values.           |
+| `describe()` | Displays statistical summary.                |
+
+---
+
+## Examples
+
+### Sum
+
+```python
+df['Salary'].sum()
+```
+
+### Mean
+
+```python
+df['Salary'].mean()
+```
+
+### Maximum Value
+
+```python
+df['Salary'].max()
+```
+
+### Minimum Value
+
+```python
+df['Salary'].min()
+```
+
+### Count Values
+
+```python
+df['Salary'].count()
+```
+
+### Statistical Summary
+
+```python
+df.describe()
+```
+
+---
+
+# 3. Group Aggregation
+
+Aggregation becomes more powerful when used with **groupby()**.
+
+### Syntax
+
+```python
+df.groupby('Column_Name').agg(Function)
+```
+
+### Example
+
+```python
+df.groupby('Department')['Salary'].mean()
+```
+
+Finds the average salary of each department.
+
+---
+
+## Multiple Aggregation Functions
+
+```python
+df.groupby('Department')['Salary'].agg(
+    ['sum', 'mean', 'max', 'min']
+)
+```
+
+---
+
+# Difference Between Sorting and Aggregation
+
+| Sorting                                 | Aggregation                                          |
+| --------------------------------------- | ---------------------------------------------------- |
+| Arranges data in order.                 | Summarizes data into calculated values.              |
+| Returns all rows in a different order.  | Returns one or more summary results.                 |
+| Uses `sort_values()` or `sort_index()`. | Uses functions like `sum()`, `mean()`, `max()`, etc. |
+
+---
+
+# Best Practices
+
+* Use `sort_values()` to organize data before analysis.
+* Use `ascending=False` to find top-performing records.
+* Use `ignore_index=True` after sorting if you want sequential indexing.
+* Use aggregation functions to generate reports and statistics.
+* Combine `groupby()` with aggregation for category-wise analysis.
+
+---
+
+# Interview Questions
+
+1. What is sorting in Pandas?
+2. What is the difference between `sort_values()` and `sort_index()`?
+3. What is the default sorting order in Pandas?
+4. How do you sort by multiple columns?
+5. What is aggregation?
+6. What is the difference between `count()` and `size()`?
+7. What does `describe()` return?
+8. What is the purpose of `groupby()`?
+9. How do you calculate the average salary department-wise?
+10. What is the difference between `mean()` and `median()`?
+
+---
+
+# Summary
+
+Sorting is used to arrange data in ascending or descending order, making datasets easier to read and analyze. Aggregation summarizes data using functions such as `sum()`, `mean()`, `count()`, and `max()`. Together, sorting and aggregation are essential Pandas features for data analysis, reporting, and machine learning workflows.

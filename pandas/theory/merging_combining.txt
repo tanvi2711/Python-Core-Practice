@@ -1,0 +1,220 @@
+# Pandas – Merging, Combining and Concatenating (Theory Notes)
+
+# 1. Introduction
+
+Pandas provides powerful functions to combine multiple DataFrames into a single DataFrame.
+
+The three most common techniques are:
+
+* **Merge (`merge()`)** – Combine DataFrames using one or more common columns (similar to SQL JOIN).
+* **Concatenate (`concat()`)** – Join DataFrames vertically or horizontally.
+* **Join (`join()`)** – Combine DataFrames based on their index.
+
+These operations are widely used in **Data Analysis**, **Machine Learning**, and **Data Cleaning**.
+
+---
+
+# 2. Merge (`merge()`)
+
+## What is Merge?
+
+`merge()` combines two DataFrames based on one or more common columns.
+
+It works similarly to **SQL JOIN**.
+
+### Syntax
+
+```python
+pd.merge(df1, df2, on='Column_Name')
+```
+
+### Common Parameters
+
+| Parameter  | Description                             |
+| ---------- | --------------------------------------- |
+| `left`     | First DataFrame                         |
+| `right`    | Second DataFrame                        |
+| `on`       | Common column used for merging          |
+| `how`      | Type of join                            |
+| `suffixes` | Adds suffixes to duplicate column names |
+
+---
+
+## Types of Merge
+
+### 1. Inner Merge (Default)
+
+Returns only matching records from both DataFrames.
+
+```python
+pd.merge(df1, df2, on='EMP_ID', how='inner')
+```
+
+---
+
+### 2. Left Merge
+
+Returns all rows from the left DataFrame and matching rows from the right DataFrame.
+
+```python
+pd.merge(df1, df2, on='EMP_ID', how='left')
+```
+
+---
+
+### 3. Right Merge
+
+Returns all rows from the right DataFrame and matching rows from the left DataFrame.
+
+```python
+pd.merge(df1, df2, on='EMP_ID', how='right')
+```
+
+---
+
+### 4. Outer Merge
+
+Returns all rows from both DataFrames.
+
+Missing matches are filled with **NaN**.
+
+```python
+pd.merge(df1, df2, on='EMP_ID', how='outer')
+```
+
+---
+
+# 3. Concatenation (`concat()`)
+
+## What is Concatenation?
+
+Concatenation joins two or more DataFrames either:
+
+* Vertically (row-wise)
+* Horizontally (column-wise)
+
+### Syntax
+
+```python
+pd.concat([df1, df2])
+```
+
+---
+
+## Vertical Concatenation (Default)
+
+Adds rows one below another.
+
+```python
+pd.concat([df1, df2], axis=0)
+```
+
+* Default operation
+* Number of columns should generally be the same.
+
+---
+
+## Horizontal Concatenation
+
+Adds columns side by side.
+
+```python
+pd.concat([df1, df2], axis=1)
+```
+
+* Number of rows should generally be the same.
+
+---
+
+## Common Parameters
+
+| Parameter           | Description                    |
+| ------------------- | ------------------------------ |
+| `axis=0`            | Concatenate rows (Default)     |
+| `axis=1`            | Concatenate columns            |
+| `ignore_index=True` | Creates a new sequential index |
+| `join='outer'`      | Keeps all columns (Default)    |
+| `join='inner'`      | Keeps only common columns      |
+
+---
+
+# 4. Join (`join()`)
+
+## What is Join?
+
+`join()` combines DataFrames using their **index**.
+
+### Syntax
+
+```python
+df1.join(df2)
+```
+
+---
+
+### Join Types
+
+```python
+df1.join(df2, how='left')
+```
+
+```python
+df1.join(df2, how='right')
+```
+
+```python
+df1.join(df2, how='inner')
+```
+
+```python
+df1.join(df2, how='outer')
+```
+
+---
+
+# 5. Difference Between Merge, Concat and Join
+
+| Feature            | merge()                     | concat()           | join()              |
+| ------------------ | --------------------------- | ------------------ | ------------------- |
+| Purpose            | Combine using common column | Stack DataFrames   | Combine using index |
+| Similar to         | SQL JOIN                    | Append/Combine     | Index Join          |
+| Uses Common Column | Yes                         | No                 | Usually No          |
+| Uses Index         | Optional                    | Yes                | Yes                 |
+| Most Used For      | Relational data             | Combining datasets | Index-based data    |
+
+---
+
+# 6. Best Practices
+
+* Use **merge()** when DataFrames have a common key.
+* Use **concat()** to combine multiple DataFrames.
+* Use **join()** when working with indexes.
+* Use `ignore_index=True` after concatenation if you want a new sequential index.
+* Check for duplicate column names after merging.
+
+---
+
+# 7. Interview Questions
+
+1. What is the difference between `merge()` and `concat()`?
+2. What is the difference between `merge()` and `join()`?
+3. What is an Inner Join?
+4. What is a Left Join?
+5. What is an Outer Join?
+6. What does `axis=0` mean in `concat()`?
+7. What does `axis=1` mean in `concat()`?
+8. What does `ignore_index=True` do?
+9. Which function is similar to SQL JOIN?
+10. When should you use `concat()` instead of `merge()`?
+
+---
+
+# Summary
+
+Pandas provides three main methods to combine DataFrames:
+
+* **`merge()`** → Combines DataFrames using common column(s).
+* **`concat()`** → Combines DataFrames vertically or horizontally.
+* **`join()`** → Combines DataFrames using their indexes.
+
+These functions are essential for data cleaning, data integration, reporting, and machine learning projects.

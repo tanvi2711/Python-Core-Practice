@@ -1,0 +1,78 @@
+Pandas – File Modification Features (Theory)
+
+Introduction
+
+Pandas is a powerful Python library for data manipulation and analysis.
+It allows you to load data from files, modify it, and save the updated
+data back to a file.
+
+Common File Operations
+
+-   Read CSV: pd.read_csv()
+-   Read Excel: pd.read_excel()
+-   Save CSV: DataFrame.to_csv()
+-   Save Excel: DataFrame.to_excel()
+
+Data Modification Features
+
+1. Add a Column
+
+Create a new column by assigning values. Example:
+df["Bonus"] = df["Salary"] * 0.10
+
+2. Update Existing Values
+
+Modify values in an existing column. Example: df["Age"] = df["Age"] + 1
+
+3. Modify Specific Cells
+
+Use .loc[] or .at[] to change individual values. Example:
+df.loc[0, "Salary"] = 50000
+
+4. Rename Columns
+
+Use rename() to change column names. Example:
+df.rename(columns={"Name":"Employee_Name"}, inplace=True)
+
+5. Drop Columns
+
+Remove unwanted columns. Example:
+df.drop(columns=["Bonus"], inplace=True)
+
+6. Drop Rows
+
+Delete rows by index. Example: df.drop(index=2, inplace=True)
+
+7. Replace Values
+
+Replace one value with another. Example:
+df.replace("Male", "M", inplace=True)
+
+8. Handle Missing Values
+
+-   Remove missing values: dropna()
+-   Fill missing values: fillna()
+
+9. Sort Data
+
+Sort rows using sort_values(). Example: df.sort_values(by="Salary")
+
+10. Save Modified Data
+
+After making changes, save the updated DataFrame. Example:
+df.to_csv("updated_data.csv", index=False)
+
+Benefits
+
+-   Easy data editing
+-   Fast handling of large datasets
+-   Supports CSV, Excel, JSON and more
+-   Simplifies data cleaning and preprocessing
+-   Widely used in Data Analysis, Machine Learning, and Data Science
+
+Summary
+
+Pandas provides simple and efficient functions to modify data stored in
+files. You can add, update, delete, replace, sort, clean, and save data
+with minimal code, making Pandas an essential library for data
+manipulation.
