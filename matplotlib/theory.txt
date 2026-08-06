@@ -1,0 +1,395 @@
+====================================================================
+                        MATPLOTLIB NOTES
+====================================================================
+
+1. WHAT IS MATPLOTLIB?
+--------------------------------------------------------------------
+
+Matplotlib is an open-source Python library used for Data Visualization.
+It helps represent data graphically so that trends, patterns, comparisons,
+and relationships can be understood easily.
+
+Matplotlib was created by John D. Hunter in 2003 and is one of the most
+widely used visualization libraries in Python.
+
+It is commonly used in:
+• Data Analytics
+• Data Science
+• Machine Learning
+• Artificial Intelligence
+• Scientific Research
+• Business Intelligence
+• Financial Analysis
+• Academic Projects
+
+====================================================================
+2. WHY DO WE USE MATPLOTLIB?
+--------------------------------------------------------------------
+
+Raw data is difficult to understand.
+
+Example:
+
+Sales = [1200, 1800, 2500, 3200, 4100]
+
+Instead of reading numbers, Matplotlib converts them into graphs,
+making it easier to analyze growth, decline, comparisons, and trends.
+
+Benefits:
+• Makes data easy to understand
+• Finds hidden patterns
+• Detects outliers
+• Compares multiple datasets
+• Creates professional reports
+• Supports decision making
+
+====================================================================
+3. FEATURES OF MATPLOTLIB
+--------------------------------------------------------------------
+
+• Free and Open Source
+• Easy to Learn
+• Highly Customizable
+• Supports Multiple Graph Types
+• Works with NumPy and Pandas
+• High-quality publication-ready figures
+• Can save graphs in PNG, PDF, SVG, JPG formats
+• Cross-platform (Windows, Linux, macOS)
+
+====================================================================
+4. MATPLOTLIB ARCHITECTURE
+--------------------------------------------------------------------
+
+                   Python Program
+                         |
+                         V
+                matplotlib.pyplot
+                         |
+          --------------------------------
+          |              |               |
+       Figure          Axes           Graph
+          |              |
+          |         X-axis & Y-axis
+          |
+      Complete Canvas
+
+Explanation:
+
+Figure  -> Entire window or canvas.
+Axes    -> Area where graph is drawn.
+Axis    -> X-axis and Y-axis.
+Plot    -> Actual visualization.
+
+====================================================================
+5. IMPORTING MATPLOTLIB
+--------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+Explanation:
+
+matplotlib        -> Main library
+pyplot            -> Plotting module
+plt               -> Alias (shortcut)
+
+====================================================================
+6. BASIC WORKFLOW
+--------------------------------------------------------------------
+
+Step 1 : Import matplotlib
+Step 2 : Prepare Data
+Step 3 : Select Graph Type
+Step 4 : Customize Graph
+Step 5 : Display Graph
+
+Flow:
+
+Data
+  |
+  V
+Choose Chart
+  |
+  V
+Customize
+  |
+  V
+Display
+
+====================================================================
+7. COMPONENTS OF A GRAPH
+--------------------------------------------------------------------
+
+               Graph Title
+                    |
+      --------------------------------
+      |                              |
+Y-axis|         Line Plot            |
+      |                              |
+      |______________________________|
+              X-axis
+
+Main Components:
+
+• Figure
+• Axes
+• X-axis
+• Y-axis
+• Title
+• Labels
+• Legend
+• Grid
+• Ticks
+• Plot Area
+
+====================================================================
+8. TYPES OF CHARTS
+--------------------------------------------------------------------
+
+1. Line Plot
+2. Scatter Plot
+3. Bar Chart
+4. Horizontal Bar Chart
+5. Histogram
+6. Pie Chart
+7. Box Plot
+8. Area Plot
+9. Stem Plot
+10. Step Plot
+11. Error Bar Plot
+12. Stack Plot
+
+====================================================================
+9. LINE PLOT
+--------------------------------------------------------------------
+
+Purpose:
+Shows change over time or continuous trends.
+
+Example:
+Monthly Sales
+Temperature
+Stock Price
+Population Growth
+
+Diagram
+
+Sales
+80 |                    *
+70 |                 *
+60 |              *
+50 |           *
+40 |        *
+30 |     *
+20 |__*_________________________
+
+    Jan Feb Mar Apr May Jun
+
+Best Used For:
+• Time series
+• Growth
+• Trend Analysis
+
+====================================================================
+10. SCATTER PLOT
+--------------------------------------------------------------------
+
+Purpose:
+Shows relationship between two numerical variables.
+
+Diagram
+
+Y
+
+10 |       *      *
+ 9 |   *        *
+ 8 |      *
+ 7 | *          *
+ 6 |
+    +-----------------------> X
+
+Best Used For:
+• Correlation
+• Outlier Detection
+• Machine Learning
+
+====================================================================
+11. BAR CHART
+--------------------------------------------------------------------
+
+Purpose:
+Compares different categories.
+
+Diagram
+
+50 |      ███
+40 |      ███      ███
+30 |      ███      ███      ███
+20 |      ███      ███      ███
+10 |______███______███______███
+
+        A        B        C
+
+Best Used For:
+• Product Sales
+• Student Marks
+• Population Comparison
+
+====================================================================
+12. HISTOGRAM
+--------------------------------------------------------------------
+
+Purpose:
+Shows frequency distribution of numerical data.
+
+Unlike a Bar Chart, histogram bars touch each other because the data is
+continuous.
+
+Used For:
+• Age Distribution
+• Salary Distribution
+• Height Analysis
+
+====================================================================
+13. PIE CHART
+--------------------------------------------------------------------
+
+Purpose:
+Shows percentage contribution of each category.
+
+Example:
+
+Company Expenses
+
+Rent          40%
+Salary        30%
+Electricity   20%
+Others        10%
+
+Used For:
+• Budget Analysis
+• Market Share
+• Survey Results
+
+====================================================================
+14. BOX PLOT
+--------------------------------------------------------------------
+
+Purpose:
+Displays the spread of data and identifies outliers.
+
+Shows:
+• Minimum
+• Maximum
+• Median
+• Quartile 1 (Q1)
+• Quartile 3 (Q3)
+• Outliers
+
+Mostly used in Data Science and Statistics.
+
+====================================================================
+15. MATPLOTLIB WITH NUMPY & PANDAS
+--------------------------------------------------------------------
+
+NumPy provides numerical arrays.
+
+Pandas provides DataFrames.
+
+Matplotlib visualizes the data.
+
+Relationship:
+
+NumPy
+   |
+Pandas
+   |
+Matplotlib
+   |
+Graphs
+
+====================================================================
+16. ADVANTAGES
+--------------------------------------------------------------------
+
+• Easy to Learn
+• Beginner Friendly
+• Large Community Support
+• Highly Customizable
+• Supports Many Graph Types
+• Excellent Documentation
+• Integrates with Pandas & NumPy
+• Suitable for Data Analytics and ML
+
+====================================================================
+17. DISADVANTAGES
+--------------------------------------------------------------------
+
+• Less attractive than Seaborn by default
+• Interactive features are limited compared to Plotly
+• Complex customization can require more code
+• Large datasets may render slowly
+
+====================================================================
+18. REAL-WORLD APPLICATIONS
+--------------------------------------------------------------------
+
+• Sales Dashboard
+• Business Reports
+• Financial Analysis
+• Weather Forecasting
+• Medical Research
+• Stock Market Analysis
+• AI Model Evaluation
+• Student Performance Analysis
+• Manufacturing Reports
+• Data Science Projects
+
+====================================================================
+19. MATPLOTLIB VS SEABORN
+--------------------------------------------------------------------
+
+Matplotlib
+----------
+• Basic Visualization
+• Highly Customizable
+• More Coding Required
+
+Seaborn
+-------
+• Built on Matplotlib
+• Better Default Themes
+• Statistical Visualization
+• Less Code
+
+====================================================================
+20. SUMMARY
+--------------------------------------------------------------------
+
+Library Name : Matplotlib
+
+Purpose      : Data Visualization
+
+Main Module  : matplotlib.pyplot
+
+Alias        : plt
+
+Works With   : NumPy, Pandas
+
+Common Charts:
+• Line Plot
+• Scatter Plot
+• Bar Chart
+• Histogram
+• Pie Chart
+• Box Plot
+
+Applications:
+• Data Analytics
+• Machine Learning
+• Artificial Intelligence
+• Scientific Research
+• Business Intelligence
+
+====================================================================
+END OF MATPLOTLIB BASICS
+====================================================================

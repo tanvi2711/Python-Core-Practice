@@ -1,0 +1,19 @@
+Scatter Plot (Short Theory)
+A Scatter Plot is used to display the relationship between two numerical variables.
+Each point on the graph represents one data observation.
+It helps identify patterns, trends, correlations, clusters, and outliers in the data.
+In Matplotlib, a scatter plot is created using plt.scatter().
+
+Syntax:
+
+plt.scatter(x, y)
+
+Example:
+
+plt.scatter(study_hours, marks)
+
+Uses:
+
+Find relationships between variables
+Detect positive or negative correlation
+Identify outliers and data distribution

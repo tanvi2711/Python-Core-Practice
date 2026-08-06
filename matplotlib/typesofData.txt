@@ -1,0 +1,112 @@
+====================================================
+                 TYPES OF DATA
+====================================================
+
+1. Numerical Data
+-----------------
+Numerical data consists of numbers and can be used for calculations.
+
+Examples:
+• Age
+• Salary
+• Height
+• Weight
+• Marks
+
+Example:
+Age = [18, 20, 22, 25]
+
+----------------------------------------------------
+
+2. Categorical Data
+-------------------
+Categorical data consists of labels or categories.
+
+Examples:
+• Gender
+• City
+• Department
+• Product Category
+• Grade
+
+Example:
+["Male", "Female", "Male"]
+
+====================================================
+                  2D LINE PLOT
+====================================================
+
+Definition:
+A 2D Line Plot connects data points using lines to show changes or trends.
+
+Use When:
+• Data changes over time
+• Showing trends
+• Comparing multiple values
+
+Diagram:
+
+Sales
+80 |                    *
+70 |                 *
+60 |              *
+50 |           *
+40 |        *
+30 |     *
+20 |__*_________________________
+
+    Jan Feb Mar Apr May Jun
+
+Syntax:
+plt.plot(x, y)
+
+====================================================
+              BIVARIATE ANALYSIS
+====================================================
+
+Definition:
+Bivariate Analysis analyzes the relationship between two variables.
+
+Types:
+1. Numerical → Numerical
+2. Categorical → Numerical
+
+Examples:
+• Age vs Salary
+• Hours Studied vs Marks
+• Department vs Average Salary
+
+Common Charts:
+• Line Plot
+• Scatter Plot
+• Bar Chart
+• Box Plot
+
+====================================================
+               TIME SERIES DATA
+====================================================
+
+Definition:
+Time Series Data is data collected over time (days, months, or years).
+
+Examples:
+• Daily Temperature
+• Monthly Sales
+• Stock Prices
+• Website Visitors
+
+Best Chart:
+✔ Line Plot
+
+Example:
+
+Month   Sales
+Jan     120
+Feb     150
+Mar     180
+Apr     200
+
+Purpose:
+• Identify trends
+• Forecast future values
+• Monitor growth or decline
